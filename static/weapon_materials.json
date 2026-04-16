@@ -1,0 +1,3955 @@
+{
+  "Bandit": {
+    "Common": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/SkySand.png",
+        "p_Decal": "/static/textures/weapons/Pattern_JacobsCommonMetal.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_BanditRare.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 4.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.0008,
+        "p_UseFullColorDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.310866,
+          0.375536,
+          0.392251
+        ],
+        "p_AColorMidtone": [
+          0.243085,
+          0.0624152,
+          0.033583
+        ],
+        "p_AColorShadow": [
+          0.127067,
+          0.111457,
+          0.089217
+        ],
+        "p_BColorHilight": [
+          0.171264,
+          0.0484152,
+          0.0208222
+        ],
+        "p_BColorMidtone": [
+          0.465306,
+          0.480645,
+          0.449966
+        ],
+        "p_BColorShadow": [
+          0.57349,
+          0.572416,
+          0.574564
+        ],
+        "p_CColorHilight": [
+          0.23756,
+          0.179809,
+          0.152558
+        ],
+        "p_CColorMidtone": [
+          0.24861,
+          0.190355,
+          0.109327
+        ],
+        "p_CColorShadow": [
+          0.0773452,
+          0.060565,
+          0.0470065
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          0.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          5.0,
+          5.0,
+          0.9552
+        ],
+        "p_DecalColor": [
+          1.94617,
+          1.94617,
+          1.94617
+        ],
+        "p_PatternScalePosition": [
+          4.0,
+          4.0,
+          24.62
+        ],
+        "p_DColor": [
+          1.34072,
+          1.01603,
+          0.807418
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.5,
+          0.0
+        ],
+        "p_PatternColor": [
+          2.51375,
+          1.91036,
+          1.23683
+        ]
+      }
+    },
+    "Uncommon": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/Chrome.png",
+        "p_Decal": "/static/textures/weapons/Icon_Teeth.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 5.0,
+        "p_ShadowsIntensity": 2.0,
+        "p_DecalRotate": 0.0008,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.519318,
+          0.0258406,
+          0.0274499
+        ],
+        "p_AColorMidtone": [
+          0.104969,
+          0.0263695,
+          0.0226206
+        ],
+        "p_AColorShadow": [
+          0.232036,
+          0.097807,
+          0.122747
+        ],
+        "p_BColorHilight": [
+          0.4033,
+          0.337868,
+          0.296551
+        ],
+        "p_BColorMidtone": [
+          0.298332,
+          0.160404,
+          0.114757
+        ],
+        "p_BColorShadow": [
+          0.0749873,
+          0.0815631,
+          0.138116
+        ],
+        "p_CColorHilight": [
+          0.723772,
+          0.876405,
+          0.779297
+        ],
+        "p_CColorMidtone": [
+          0.325843,
+          0.0904917,
+          0.0280828
+        ],
+        "p_CColorShadow": [
+          0.33995,
+          0.390471,
+          0.52809
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          5.0,
+          5.0,
+          0.7213
+        ],
+        "p_DecalColor": [
+          2.70132,
+          2.70132,
+          2.70132
+        ],
+        "p_PatternScalePosition": [
+          4.0,
+          4.0,
+          21.0042
+        ],
+        "p_DColor": [
+          0.498317,
+          0.520032,
+          1.0
+        ],
+        "p_PatternColor": [
+          1.63059,
+          1.63059,
+          1.63059
+        ]
+      }
+    },
+    "Rare": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyC.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_BanditRare.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 2.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.0466,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 2.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.348053,
+          0.0531819,
+          0.000304068
+        ],
+        "p_AColorMidtone": [
+          0.0136609,
+          0.0114611,
+          0.0441973
+        ],
+        "p_AColorShadow": [
+          0.100651,
+          0.0906554,
+          0.149166
+        ],
+        "p_BColorHilight": [
+          0.132592,
+          0.126122,
+          0.123069
+        ],
+        "p_BColorMidtone": [
+          0.172064,
+          0.157839,
+          0.220986
+        ],
+        "p_BColorShadow": [
+          0.132592,
+          0.0517495,
+          0.0102931
+        ],
+        "p_CColorHilight": [
+          1.0518,
+          0.103067,
+          0.0
+        ],
+        "p_CColorMidtone": [
+          0.823174,
+          0.0475429,
+          0.0
+        ],
+        "p_CColorShadow": [
+          0.160215,
+          0.00937322,
+          0.0
+        ],
+        "p_ReflectColor": [
+          2.41321,
+          2.41321,
+          2.41321
+        ],
+        "p_ReflectionChannelScale": [
+          0.3,
+          0.3,
+          0.3
+        ],
+        "p_DecalScalePosition": [
+          5.0,
+          5.0,
+          0.8675
+        ],
+        "p_PatternScalePosition": [
+          4.0,
+          4.0,
+          1.0
+        ],
+        "p_DColor": [
+          0.198245,
+          0.464071,
+          0.429692
+        ],
+        "p_DecalChannel": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.7137,
+          0.2403,
+          0.0
+        ],
+        "p_PatternColor": [
+          2.967,
+          2.967,
+          2.967
+        ]
+      }
+    },
+    "Epic": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyC.png",
+        "p_Decal": "/static/textures/weapons/BanditEpicDecal.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_BanditRare.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 0.5,
+        "p_ShadowsIntensity": 2.0,
+        "p_DecalRotate": 0.0466,
+        "p_UseFullColorDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.55799,
+          0.238489,
+          0.231224
+        ],
+        "p_AColorMidtone": [
+          0.171264,
+          0.0,
+          0.000526006
+        ],
+        "p_AColorShadow": [
+          0.0272004,
+          0.0553429,
+          0.0773452
+        ],
+        "p_BColorHilight": [
+          0.949229,
+          0.48911,
+          0.0
+        ],
+        "p_BColorMidtone": [
+          1.0,
+          0.0,
+          0.0351405
+        ],
+        "p_BColorShadow": [
+          0.370263,
+          0.469596,
+          0.344828
+        ],
+        "p_CColorHilight": [
+          0.988914,
+          0.523546,
+          0.0
+        ],
+        "p_CColorMidtone": [
+          0.834223,
+          0.287856,
+          0.0
+        ],
+        "p_CColorShadow": [
+          0.0662959,
+          0.0205131,
+          0.0205131
+        ],
+        "p_EmissiveColor": [
+          1.91009,
+          0.41291,
+          0.0
+        ],
+        "p_ReflectColor": [
+          2.41321,
+          1.76292,
+          0.631128
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          4.39367,
+          5.0,
+          0.8675
+        ],
+        "p_PatternScalePosition": [
+          4.0,
+          4.0,
+          1.0
+        ],
+        "p_DColor": [
+          0.218057,
+          0.299586,
+          0.464071
+        ],
+        "p_DecalChannel": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.2,
+          0.3,
+          0.0
+        ],
+        "p_PatternColor": [
+          2.967,
+          2.967,
+          2.967
+        ]
+      }
+    },
+    "Legendary": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyC.png",
+        "p_Decal": "/static/textures/weapons/FacePaint_SirenBanditEpic.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_BanditRare.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 0.5,
+        "p_ShadowsIntensity": 2.0,
+        "p_DecalRotate": 0.0466,
+        "p_UseFullColorDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.45965,
+          0.39435,
+          0.153194
+        ],
+        "p_AColorMidtone": [
+          0.497219,
+          0.0329819,
+          0.128654
+        ],
+        "p_AColorShadow": [
+          0.0453277,
+          0.00867713,
+          0.182314
+        ],
+        "p_BColorHilight": [
+          1.0293,
+          0.80273,
+          1.23128
+        ],
+        "p_BColorMidtone": [
+          0.0564089,
+          0.0623779,
+          0.121542
+        ],
+        "p_BColorShadow": [
+          0.0113142,
+          0.109449,
+          0.215462
+        ],
+        "p_CColorHilight": [
+          1.01303,
+          1.45965,
+          0.871519
+        ],
+        "p_CColorMidtone": [
+          0.0824395,
+          0.558783,
+          0.828699
+        ],
+        "p_CColorShadow": [
+          0.0695757,
+          0.0259055,
+          0.287282
+        ],
+        "p_EmissiveColor": [
+          1.91009,
+          0.0583384,
+          0.312519
+        ],
+        "p_ReflectColor": [
+          2.41321,
+          1.76292,
+          0.631128
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          6.3102,
+          6.7664,
+          0.4868
+        ],
+        "p_DecalColor": [
+          0.0,
+          4.8963,
+          7.35198
+        ],
+        "p_PatternScalePosition": [
+          4.0,
+          4.0,
+          1.0
+        ],
+        "p_DColor": [
+          0.218057,
+          0.299586,
+          0.464071
+        ],
+        "p_DecalChannel": [
+          1.0,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.2,
+          0.3,
+          0.0
+        ],
+        "p_PatternColor": [
+          2.967,
+          2.967,
+          2.967
+        ]
+      }
+    }
+  },
+  "Dahl": {
+    "Common": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_DahlCommon.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 4.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_ReplacePattern": 0.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.49584,
+          1.19932,
+          0.694232
+        ],
+        "p_AColorMidtone": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_AColorShadow": [
+          0.447306,
+          0.502842,
+          0.629811
+        ],
+        "p_BColorHilight": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_BColorMidtone": [
+          1.74034,
+          1.73282,
+          1.47163
+        ],
+        "p_BColorShadow": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_CColorHilight": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_CColorMidtone": [
+          0.23756,
+          0.175043,
+          0.131654
+        ],
+        "p_CColorShadow": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_PatternScalePosition": [
+          8.0,
+          8.0,
+          0.0024
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          2.12932,
+          2.12932,
+          2.12932
+        ]
+      }
+    },
+    "Uncommon": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyB.png",
+        "p_Decal": "/static/textures/weapons/Pattern_MetalPebbled.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_DahlUncommon.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 4.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.2132
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.519318,
+          0.47606,
+          0.256639
+        ],
+        "p_AColorMidtone": [
+          2.10457,
+          2.10457,
+          2.10457
+        ],
+        "p_AColorShadow": [
+          0.832222,
+          0.948625,
+          1.21476
+        ],
+        "p_BColorHilight": [
+          0.565592,
+          0.580089,
+          0.427657
+        ],
+        "p_BColorMidtone": [
+          0.205624,
+          0.215462,
+          0.206656
+        ],
+        "p_BColorShadow": [
+          0.0869028,
+          0.0945396,
+          0.110493
+        ],
+        "p_CColorHilight": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_CColorMidtone": [
+          0.542388,
+          0.607817,
+          0.685058
+        ],
+        "p_CColorShadow": [
+          0.861847,
+          0.861847,
+          0.861847
+        ],
+        "p_ReflectColor": [
+          1.61603,
+          1.42884,
+          1.00162
+        ],
+        "p_ReflectionChannelScale": [
+          0.5,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          33.3333,
+          33.3333,
+          0.0
+        ],
+        "p_DecalColor": [
+          1.7075,
+          1.7075,
+          1.7075
+        ],
+        "p_PatternScalePosition": [
+          6.0,
+          6.0,
+          0.3853
+        ],
+        "p_DColor": [
+          0.0607712,
+          0.0607712,
+          0.0607712
+        ],
+        "p_DecalChannel": [
+          0.5,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          2.12932,
+          2.12932,
+          2.12932
+        ]
+      }
+    },
+    "Rare": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyB.png",
+        "p_Decal": "/static/textures/weapons/Pattern_MetalPebbled.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_DahlRare.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 4.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.2132
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.519318,
+          0.47606,
+          0.256639
+        ],
+        "p_AColorMidtone": [
+          1.83523,
+          1.9045,
+          2.12932
+        ],
+        "p_AColorShadow": [
+          0.832222,
+          0.948625,
+          1.21476
+        ],
+        "p_BColorHilight": [
+          0.30786,
+          0.334136,
+          0.453022
+        ],
+        "p_BColorMidtone": [
+          0.209814,
+          0.282997,
+          0.370152
+        ],
+        "p_BColorShadow": [
+          0.0869028,
+          0.0945396,
+          0.110493
+        ],
+        "p_CColorHilight": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_CColorMidtone": [
+          0.408963,
+          0.611591,
+          0.850797
+        ],
+        "p_CColorShadow": [
+          0.861847,
+          0.861847,
+          0.861847
+        ],
+        "p_ReflectColor": [
+          1.61603,
+          1.42884,
+          1.00162
+        ],
+        "p_ReflectionChannelScale": [
+          0.5,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          33.3333,
+          33.3333,
+          0.0
+        ],
+        "p_DecalColor": [
+          1.7075,
+          1.7075,
+          1.7075
+        ],
+        "p_PatternScalePosition": [
+          6.0,
+          6.0,
+          0.3853
+        ],
+        "p_DColor": [
+          0.0662959,
+          0.0662959,
+          0.0662959
+        ],
+        "p_DecalChannel": [
+          0.5,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.98,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          2.12932,
+          2.12932,
+          2.12932
+        ]
+      }
+    },
+    "Epic": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "p_Decal": "/static/textures/weapons/Logo_TorgueHyperionDahl_Comp.png",
+        "p_Pattern": "/static/textures/weapons/DahlEpicPattern2.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 4.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.5,
+        "p_UseFullColorDecal": 0.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.519318,
+          0.47606,
+          0.256639
+        ],
+        "p_AColorMidtone": [
+          1.66051,
+          1.66051,
+          1.66051
+        ],
+        "p_AColorShadow": [
+          0.685094,
+          0.780919,
+          1.0
+        ],
+        "p_BColorHilight": [
+          0.309381,
+          0.225263,
+          0.0893262
+        ],
+        "p_BColorMidtone": [
+          0.171264,
+          0.171264,
+          0.171264
+        ],
+        "p_BColorShadow": [
+          0.196419,
+          0.231199,
+          0.303856
+        ],
+        "p_CColorHilight": [
+          1.09036,
+          0.707465,
+          0.295209
+        ],
+        "p_CColorMidtone": [
+          0.55799,
+          0.55799,
+          0.55799
+        ],
+        "p_CColorShadow": [
+          0.204412,
+          0.204412,
+          0.204412
+        ],
+        "p_DecalScalePosition": [
+          12.1654,
+          15.5763,
+          0.5433
+        ],
+        "p_DecalColor": [
+          2.70132,
+          1.24943,
+          0.0
+        ],
+        "p_PatternScalePosition": [
+          4.6,
+          4.6,
+          0.5381
+        ],
+        "p_DColor": [
+          0.132592,
+          0.132592,
+          0.132592
+        ],
+        "p_DecalChannel": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          1.28367,
+          1.28367,
+          1.28367
+        ]
+      }
+    },
+    "Legendary": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "p_Decal": "/static/textures/weapons/Logo_TorgueHyperionDahl_Comp.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_DahlLegendCamo1.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 4.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.5,
+        "p_UseFullColorDecal": 0.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.56853,
+          3.37966,
+          2.8016
+        ],
+        "p_AColorMidtone": [
+          8.59296,
+          10.6433,
+          1.2352
+        ],
+        "p_AColorShadow": [
+          0.0478682,
+          0.134436,
+          0.270708
+        ],
+        "p_BColorHilight": [
+          0.309381,
+          0.225263,
+          0.0893262
+        ],
+        "p_BColorMidtone": [
+          0.171264,
+          0.171264,
+          0.171264
+        ],
+        "p_BColorShadow": [
+          0.0209408,
+          0.0392004,
+          0.0773452
+        ],
+        "p_CColorHilight": [
+          1.09036,
+          0.707465,
+          0.295209
+        ],
+        "p_CColorMidtone": [
+          0.348053,
+          0.204153,
+          0.194223
+        ],
+        "p_CColorShadow": [
+          0.204412,
+          0.204412,
+          0.204412
+        ],
+        "p_DecalScalePosition": [
+          12.1654,
+          15.5763,
+          0.5433
+        ],
+        "p_DecalColor": [
+          2.62303,
+          2.34276,
+          0.0
+        ],
+        "p_PatternScalePosition": [
+          8.418,
+          7.2427,
+          0.5381
+        ],
+        "p_DColor": [
+          0.132592,
+          0.132592,
+          0.132592
+        ],
+        "p_DecalChannel": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          1.28367,
+          1.28367,
+          1.28367
+        ]
+      }
+    }
+  },
+  "Hyperion": {
+    "Common": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "p_Decal": "/static/textures/weapons/Pattern_HyperionStripeCommon.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 20.0,
+        "p_ShadowsIntensity": 20.0,
+        "p_DecalRotate": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.27338,
+          1.3718,
+          1.41404
+        ],
+        "p_AColorMidtone": [
+          1.71561,
+          1.25948,
+          0.0962971
+        ],
+        "p_AColorShadow": [
+          1.12422,
+          0.9707,
+          0.439422
+        ],
+        "p_BColorHilight": [
+          1.0,
+          0.970237,
+          0.781313
+        ],
+        "p_BColorMidtone": [
+          0.896108,
+          0.958047,
+          1.17532
+        ],
+        "p_BColorShadow": [
+          0.563515,
+          0.45343,
+          0.342476
+        ],
+        "p_CColorHilight": [
+          1.84688,
+          1.84688,
+          1.84688
+        ],
+        "p_CColorMidtone": [
+          1.42517,
+          1.42517,
+          1.42517
+        ],
+        "p_CColorShadow": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          32.1543,
+          52.6316,
+          -0.0461
+        ],
+        "p_DecalColor": [
+          3.69351,
+          3.69351,
+          3.69351
+        ],
+        "p_DColor": [
+          0.0773452,
+          0.0773452,
+          0.0773452
+        ],
+        "p_DecalChannel": [
+          0.88,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Uncommon": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyB.png",
+        "p_Decal": "/static/textures/weapons/Pattern_HyperionStripeUncommon.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 1.0,
+        "p_ShadowsIntensity": 2.0,
+        "p_DecalRotate": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.767928,
+          0.732404,
+          0.530345
+        ],
+        "p_AColorMidtone": [
+          3.23188,
+          2.11619,
+          0.0
+        ],
+        "p_AColorShadow": [
+          1.82823,
+          0.88377,
+          0.171773
+        ],
+        "p_BColorHilight": [
+          1.0,
+          0.970237,
+          0.781313
+        ],
+        "p_BColorMidtone": [
+          0.152235,
+          0.176066,
+          0.259659
+        ],
+        "p_BColorShadow": [
+          0.4033,
+          0.296611,
+          0.189079
+        ],
+        "p_CColorHilight": [
+          1.84688,
+          1.84688,
+          1.84688
+        ],
+        "p_CColorMidtone": [
+          1.42517,
+          1.42517,
+          1.42517
+        ],
+        "p_CColorShadow": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_ReflectColor": [
+          1.0,
+          0.653378,
+          0.408862
+        ],
+        "p_ReflectionChannelScale": [
+          0.7,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          10.2987,
+          31.746,
+          0.5355
+        ],
+        "p_DecalColor": [
+          3.48045,
+          3.48045,
+          3.48045
+        ],
+        "p_DColor": [
+          0.0773452,
+          0.0773452,
+          0.0773452
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Rare": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyB.png",
+        "p_Decal": "/static/textures/weapons/Pattern_HyperionStripeUncommon.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 2.0,
+        "p_ShadowsIntensity": 2.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.660701,
+          1.0,
+          0.218084
+        ],
+        "p_AColorMidtone": [
+          0.192905,
+          0.359103,
+          0.0731026
+        ],
+        "p_AColorShadow": [
+          0.141731,
+          0.15469,
+          0.0963782
+        ],
+        "p_BColorHilight": [
+          1.0,
+          0.970237,
+          0.781313
+        ],
+        "p_BColorMidtone": [
+          0.102497,
+          0.107948,
+          0.127067
+        ],
+        "p_BColorShadow": [
+          0.153813,
+          0.244675,
+          0.4033
+        ],
+        "p_CColorHilight": [
+          1.84688,
+          1.84688,
+          1.84688
+        ],
+        "p_CColorMidtone": [
+          1.42517,
+          1.42517,
+          1.42517
+        ],
+        "p_CColorShadow": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_ReflectColor": [
+          1.0,
+          0.653378,
+          0.408862
+        ],
+        "p_ReflectionChannelScale": [
+          0.7,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          10.2987,
+          31.746,
+          0.5355
+        ],
+        "p_DecalColor": [
+          2.3204,
+          1.56152,
+          0.0
+        ],
+        "p_DColor": [
+          0.0773452,
+          0.0773452,
+          0.0773452
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Epic": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyC.png",
+        "p_Decal": "/static/textures/weapons/Pattern_HyperionStripeUncommon.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 1.0,
+        "p_ShadowsIntensity": 2.0,
+        "p_DecalRotate": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p_AColorMidtone": [
+          0.0497219,
+          0.0497219,
+          0.0497219
+        ],
+        "p_AColorShadow": [
+          0.011721,
+          0.0157191,
+          0.016574
+        ],
+        "p_BColorHilight": [
+          3.54869,
+          3.40931,
+          2.63782
+        ],
+        "p_BColorMidtone": [
+          1.96732,
+          1.43789,
+          0.0
+        ],
+        "p_BColorShadow": [
+          1.29284,
+          0.556136,
+          0.0
+        ],
+        "p_CColorHilight": [
+          1.84688,
+          1.84688,
+          1.84688
+        ],
+        "p_CColorMidtone": [
+          1.42517,
+          1.42517,
+          1.42517
+        ],
+        "p_CColorShadow": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_ReflectColor": [
+          1.7163,
+          1.77446,
+          1.70489
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          10.2987,
+          140.845,
+          0.5355
+        ],
+        "p_DecalColor": [
+          1.50831,
+          0.0,
+          0.0
+        ],
+        "p_DColor": [
+          0.0773452,
+          0.0773452,
+          0.0773452
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "Jakobs": {
+    "Common": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyB.png",
+        "p_Decal": "/static/textures/weapons/Pattern_JacobsCommonMetal.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_JakobsCommon.png"
+      },
+      "scalars": {
+        "p_ShadowsIntensity": 8.0,
+        "p_UseFullColorDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.364962,
+          0.368814,
+          0.370152
+        ],
+        "p_AColorMidtone": [
+          0.629811,
+          0.555716,
+          0.533364
+        ],
+        "p_AColorShadow": [
+          0.294123,
+          0.342097,
+          0.602188
+        ],
+        "p_ReflectColor": [
+          1.40308,
+          1.18098,
+          0.733972
+        ],
+        "p_ReflectionChannelScale": [
+          0.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          10.0,
+          10.0,
+          0.1
+        ],
+        "p_DecalColor": [
+          1.86796,
+          1.92097,
+          1.95405
+        ],
+        "p_PatternScalePosition": [
+          8.0,
+          8.0,
+          0.37
+        ],
+        "p_DecalChannel": [
+          0.0,
+          1.0,
+          1.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          3.23188,
+          3.23188,
+          3.23188
+        ]
+      }
+    },
+    "Uncommon": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyB.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_JakobsUncommonWood.png"
+      },
+      "scalars": {
+        "p_ShadowsIntensity": 8.0,
+        "p_UseFullColorDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.417302,
+          0.779834,
+          1.34072
+        ],
+        "p_AColorMidtone": [
+          1.31158,
+          1.31158,
+          1.31158
+        ],
+        "p_AColorShadow": [
+          0.728489,
+          0.801709,
+          1.19867
+        ],
+        "p_BColorHilight": [
+          0.756915,
+          0.919,
+          1.0
+        ],
+        "p_BColorMidtone": [
+          0.436084,
+          0.458733,
+          0.502744
+        ],
+        "p_BColorShadow": [
+          0.348053,
+          0.285622,
+          0.230804
+        ],
+        "p_CColorHilight": [
+          0.436448,
+          0.336619,
+          0.26284
+        ],
+        "p_CColorMidtone": [
+          0.185686,
+          0.183858,
+          0.209937
+        ],
+        "p_CColorShadow": [
+          0.132592,
+          0.102571,
+          0.0726094
+        ],
+        "p_ReflectColor": [
+          0.541804,
+          0.840625,
+          1.183
+        ],
+        "p_ReflectionChannelScale": [
+          1.5,
+          1.5,
+          2.0
+        ],
+        "p_DecalScalePosition": [
+          5.0,
+          5.0,
+          0.1
+        ],
+        "p_DecalColor": [
+          1.86796,
+          1.92097,
+          1.95405
+        ],
+        "p_PatternScalePosition": [
+          8.0,
+          8.0,
+          0.37
+        ],
+        "p_DColor": [
+          0.883945,
+          0.883945,
+          0.883945
+        ],
+        "p_DecalChannel": [
+          0.0,
+          1.0,
+          1.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          2.18063,
+          2.18063,
+          2.18063
+        ]
+      }
+    },
+    "Rare": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/SkySand.png",
+        "p_Decal": "/static/textures/weapons/Pattern_HexScrollGrunge_Comp.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_JakobsRareWood.png"
+      },
+      "scalars": {
+        "p_ShadowsIntensity": 8.0,
+        "p_ReflectColorScale": 1.0,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.45511,
+          1.26953,
+          0.994236
+        ],
+        "p_AColorMidtone": [
+          0.790026,
+          0.790026,
+          0.790026
+        ],
+        "p_AColorShadow": [
+          0.850797,
+          0.489652,
+          0.313588
+        ],
+        "p_BColorHilight": [
+          0.756915,
+          0.919,
+          1.0
+        ],
+        "p_BColorMidtone": [
+          0.969137,
+          1.01947,
+          1.11728
+        ],
+        "p_BColorShadow": [
+          0.243639,
+          0.278403,
+          0.348053
+        ],
+        "p_CColorHilight": [
+          1.0,
+          0.771269,
+          0.602225
+        ],
+        "p_CColorMidtone": [
+          0.532626,
+          0.527382,
+          0.602188
+        ],
+        "p_CColorShadow": [
+          0.357124,
+          0.360247,
+          0.497219
+        ],
+        "p_ReflectColor": [
+          2.26239,
+          2.26239,
+          2.26239
+        ],
+        "p_ReflectionChannelScale": [
+          1.5,
+          1.5,
+          2.0
+        ],
+        "p_DecalScalePosition": [
+          7.14286,
+          12.5,
+          0.02
+        ],
+        "p_DecalColor": [
+          2.59684,
+          2.67054,
+          2.71653
+        ],
+        "p_PatternScalePosition": [
+          5.0,
+          5.0,
+          2.7885
+        ],
+        "p_DColor": [
+          0.883945,
+          0.883945,
+          0.883945
+        ],
+        "p_DecalChannel": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          2.18063,
+          2.18063,
+          2.18063
+        ]
+      }
+    },
+    "Epic": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/Gold.png",
+        "p_Decal": "/static/textures/weapons/Pattern_JakobsEpic_SpaltedMaple.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_HexScrollGrunge_Comp.png"
+      },
+      "scalars": {
+        "p_ShadowsIntensity": 4.0,
+        "p_ReflectColorScale": 1.0,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.45511,
+          1.26953,
+          0.994236
+        ],
+        "p_AColorMidtone": [
+          0.979407,
+          0.979407,
+          0.979407
+        ],
+        "p_AColorShadow": [
+          0.789918,
+          1.14961,
+          2.33763
+        ],
+        "p_BColorHilight": [
+          2.29103,
+          2.20057,
+          1.02725
+        ],
+        "p_BColorMidtone": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_BColorShadow": [
+          0.211376,
+          0.358642,
+          0.574564
+        ],
+        "p_CColorHilight": [
+          2.15467,
+          0.915682,
+          0.0
+        ],
+        "p_CColorMidtone": [
+          0.602188,
+          0.424162,
+          0.0722486
+        ],
+        "p_CColorShadow": [
+          2.44582,
+          0.841302,
+          0.0119343
+        ],
+        "p_ReflectColor": [
+          4.02177,
+          4.02177,
+          4.02177
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          4.20946,
+          12.3045,
+          -0.15629
+        ],
+        "p_DecalColor": [
+          1.86796,
+          1.92097,
+          1.95405
+        ],
+        "p_PatternScalePosition": [
+          8.0,
+          10.56,
+          2.8164
+        ],
+        "p_DColor": [
+          0.883945,
+          0.77401,
+          0.259365
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "p_PatternColor": [
+          3.35156,
+          3.35156,
+          3.35156
+        ]
+      }
+    },
+    "Legendary": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/Gold.png",
+        "p_Decal": "/static/textures/weapons/Pattern_JakobsEpic_SpaltedMaple.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_Jakobs_CaseHardened.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 0.5,
+        "p_ShadowsIntensity": 3.0,
+        "p_ReflectColorScale": 1.0,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          2.09513,
+          1.44261,
+          0.474647
+        ],
+        "p_AColorMidtone": [
+          0.979407,
+          0.979407,
+          0.979407
+        ],
+        "p_AColorShadow": [
+          0.789918,
+          1.14961,
+          2.33763
+        ],
+        "p_BColorHilight": [
+          0.324428,
+          0.563936,
+          1.0
+        ],
+        "p_BColorMidtone": [
+          0.00483854,
+          0.151061,
+          0.436448
+        ],
+        "p_BColorShadow": [
+          0.00659516,
+          0.00743851,
+          0.0662959
+        ],
+        "p_CColorHilight": [
+          1.96732,
+          1.42088,
+          1.35159
+        ],
+        "p_CColorMidtone": [
+          0.48617,
+          0.453939,
+          0.453939
+        ],
+        "p_CColorShadow": [
+          0.00715005,
+          0.0608394,
+          0.215462
+        ],
+        "p_ReflectColor": [
+          13.2896,
+          12.0167,
+          5.41782
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          4.20946,
+          12.3045,
+          -0.15629
+        ],
+        "p_DecalColor": [
+          0.104969,
+          0.0678401,
+          0.0614749
+        ],
+        "p_PatternScalePosition": [
+          11.36,
+          16.6181,
+          2.4273
+        ],
+        "p_DColor": [
+          0.0344126,
+          0.0885661,
+          0.220986
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "p_PatternColor": [
+          2.74225,
+          2.212,
+          2.212
+        ]
+      }
+    }
+  },
+  "Maliwan": {
+    "Common": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyA.png",
+        "p_Decal": "/static/textures/weapons/Pattern_MaliwanCommon.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 4.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": -0.14,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.9052,
+          1.79351,
+          1.29472
+        ],
+        "p_AColorMidtone": [
+          3.64533,
+          3.54302,
+          3.40695
+        ],
+        "p_AColorShadow": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_BColorHilight": [
+          0.421226,
+          0.439001,
+          0.662959
+        ],
+        "p_BColorMidtone": [
+          0.0488382,
+          0.0531105,
+          0.0883945
+        ],
+        "p_BColorShadow": [
+          0.677628,
+          0.738659,
+          0.966815
+        ],
+        "p_CColorHilight": [
+          1.30488,
+          1.41404,
+          0.89928
+        ],
+        "p_CColorMidtone": [
+          0.88069,
+          0.889627,
+          1.0
+        ],
+        "p_CColorShadow": [
+          0.469596,
+          0.149183,
+          0.0519045
+        ],
+        "p_EmissiveColor": [
+          0.709234,
+          1.28367,
+          0.94206
+        ],
+        "p_ReflectColor": [
+          0.65191,
+          0.631093,
+          0.56187
+        ],
+        "p_DecalScalePosition": [
+          10.6383,
+          1.0,
+          0.6066
+        ],
+        "p_PatternScalePosition": [
+          0.2445,
+          1.0,
+          -0.28
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Uncommon": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyA.png",
+        "p_Decal": "/static/textures/weapons/Pattern_MaliwanUncommon.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 4.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.12,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.9052,
+          1.79351,
+          1.29472
+        ],
+        "p_AColorMidtone": [
+          3.64533,
+          3.54302,
+          3.40695
+        ],
+        "p_AColorShadow": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_BColorHilight": [
+          0.414618,
+          0.608791,
+          0.662959
+        ],
+        "p_BColorMidtone": [
+          0.14041,
+          0.152693,
+          0.254134
+        ],
+        "p_BColorShadow": [
+          0.677628,
+          0.738659,
+          0.966815
+        ],
+        "p_CColorHilight": [
+          0.0398585,
+          0.0974363,
+          0.116018
+        ],
+        "p_CColorMidtone": [
+          0.0290584,
+          0.0353741,
+          0.0441973
+        ],
+        "p_CColorShadow": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p_EmissiveColor": [
+          0.399023,
+          3.0,
+          1.08422
+        ],
+        "p_ReflectColor": [
+          0.65191,
+          0.631093,
+          0.56187
+        ],
+        "p_DecalScalePosition": [
+          3.75375,
+          1.0,
+          0.2407
+        ],
+        "p_PatternScalePosition": [
+          0.2445,
+          1.0,
+          -0.28
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Rare": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyA.png",
+        "p_Decal": "/static/textures/weapons/Pattern_MaliwanRare.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_HexScrollGrunge_Comp.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 4.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.12,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.925798,
+          1.41682,
+          1.49992
+        ],
+        "p_AColorMidtone": [
+          1.82823,
+          1.82823,
+          1.82823
+        ],
+        "p_AColorShadow": [
+          0.921587,
+          1.00147,
+          1.27332
+        ],
+        "p_BColorHilight": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_BColorMidtone": [
+          3.35156,
+          3.35156,
+          3.35156
+        ],
+        "p_BColorShadow": [
+          0.234721,
+          0.513793,
+          0.448679
+        ],
+        "p_CColorHilight": [
+          1.24826,
+          1.12785,
+          0.972415
+        ],
+        "p_CColorMidtone": [
+          0.995113,
+          1.0,
+          0.990225
+        ],
+        "p_CColorShadow": [
+          0.0608834,
+          0.89294,
+          1.0
+        ],
+        "p_EmissiveColor": [
+          0.0,
+          1.47152,
+          0.599828
+        ],
+        "p_ReflectColor": [
+          0.490463,
+          1.72827,
+          2.05674
+        ],
+        "p_DecalScalePosition": [
+          -4.15628,
+          1.0,
+          0.2653
+        ],
+        "p_PatternScalePosition": [
+          17.0,
+          17.0,
+          0.0
+        ],
+        "p_DColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.91,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          1.84976,
+          1.9596,
+          2.08038
+        ]
+      }
+    },
+    "Epic": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyC.png",
+        "p_Decal": "/static/textures/weapons/Pattern_MaliwanEpic.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_HexScrollGrunge_Comp.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 2.0,
+        "p_ShadowsIntensity": 2.0,
+        "p_DecalRotate": 0.12,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          2.93858,
+          4.04973,
+          4.7625
+        ],
+        "p_AColorMidtone": [
+          1.82823,
+          1.82823,
+          1.82823
+        ],
+        "p_AColorShadow": [
+          0.921587,
+          1.00147,
+          1.27332
+        ],
+        "p_BColorHilight": [
+          1.51052,
+          1.85144,
+          1.98894
+        ],
+        "p_BColorMidtone": [
+          0.0386726,
+          0.0386726,
+          0.0386726
+        ],
+        "p_BColorShadow": [
+          0.0999627,
+          0.143993,
+          0.187838
+        ],
+        "p_CColorHilight": [
+          0.0,
+          3.41479,
+          2.47866
+        ],
+        "p_CColorMidtone": [
+          0.0,
+          1.03404,
+          2.05674
+        ],
+        "p_CColorShadow": [
+          0.0,
+          0.132346,
+          3.01644
+        ],
+        "p_EmissiveColor": [
+          0.0,
+          1.45415,
+          2.91915
+        ],
+        "p_ReflectColor": [
+          1.99763,
+          2.05674,
+          2.03715
+        ],
+        "p_DecalScalePosition": [
+          5.30786,
+          1.0,
+          0.2573
+        ],
+        "p_DecalColor": [
+          1.49555,
+          1.55568,
+          1.60173
+        ],
+        "p_PatternScalePosition": [
+          17.0,
+          17.0,
+          0.0
+        ],
+        "p_DColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.91,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          1.84976,
+          1.9596,
+          2.08038
+        ]
+      }
+    },
+    "Legendary": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_Launchers_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_LauncherShotgunPistol_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_Launchers_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyC.png",
+        "p_Decal": "/static/textures/weapons/Pattern_MaliwanLegendaryRL.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_HexScrollGrunge_Comp.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 2.0,
+        "p_ShadowsIntensity": 1.0,
+        "p_DecalRotate": 0.12,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          2.16186,
+          0.551453,
+          0.0239667
+        ],
+        "p_AColorMidtone": [
+          0.668484,
+          0.000164041,
+          0.0259975
+        ],
+        "p_AColorShadow": [
+          0.225524,
+          0.102879,
+          0.930779
+        ],
+        "p_BColorHilight": [
+          0.369372,
+          0.36367,
+          0.88947
+        ],
+        "p_BColorMidtone": [
+          0.0,
+          0.0263639,
+          0.419874
+        ],
+        "p_BColorShadow": [
+          0.00168692,
+          0.000492504,
+          0.00369724
+        ],
+        "p_CColorHilight": [
+          4.89119,
+          2.98688,
+          0.513601
+        ],
+        "p_CColorMidtone": [
+          0.9743,
+          0.113921,
+          0.018913
+        ],
+        "p_CColorShadow": [
+          1.42517,
+          0.128784,
+          0.115481
+        ],
+        "p_EmissiveColor": [
+          2.91915,
+          0.469646,
+          0.145253
+        ],
+        "p_ReflectColor": [
+          1.99763,
+          2.05674,
+          2.03715
+        ],
+        "p_DecalScalePosition": [
+          2.9554,
+          1.0,
+          0.2957
+        ],
+        "p_DecalColor": [
+          1.53633,
+          1.5981,
+          1.64542
+        ],
+        "p_PatternScalePosition": [
+          17.0,
+          17.0,
+          0.0
+        ],
+        "p_DColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.91,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          4.7625,
+          4.3772,
+          1.52622
+        ]
+      }
+    }
+  },
+  "Tediore": {
+    "Common": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyA.png",
+        "p_Decal": "/static/textures/weapons/Logo_TedioreMaliwanVladof_Comp.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_HexScrollGrunge_Comp.png"
+      },
+      "scalars": {
+        "p_ShadowsIntensity": 8.0,
+        "p_DecalRotate": 0.0338,
+        "p_UseFullColorDecal": 0.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.38204,
+          1.25009,
+          0.817751
+        ],
+        "p_AColorMidtone": [
+          1.0,
+          0.891104,
+          0.758435
+        ],
+        "p_AColorShadow": [
+          0.779534,
+          0.771168,
+          0.900519
+        ],
+        "p_BColorHilight": [
+          1.75723,
+          1.75723,
+          1.75723
+        ],
+        "p_BColorMidtone": [
+          1.13076,
+          1.34228,
+          1.39229
+        ],
+        "p_BColorShadow": [
+          0.629811,
+          0.567188,
+          0.408671
+        ],
+        "p_CColorHilight": [
+          0.977865,
+          0.430042,
+          0.378202
+        ],
+        "p_CColorMidtone": [
+          0.73478,
+          0.482173,
+          0.450621
+        ],
+        "p_CColorShadow": [
+          0.353578,
+          0.121507,
+          0.207004
+        ],
+        "p_ReflectColor": [
+          0.22105,
+          0.281758,
+          0.225847
+        ],
+        "p_DecalScalePosition": [
+          3.79507,
+          15.4083,
+          0.437
+        ],
+        "p_DecalColor": [
+          2.44582,
+          2.31632,
+          2.14855
+        ],
+        "p_PatternScalePosition": [
+          4.7112,
+          4.64,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.54,
+          0.58,
+          0.64
+        ],
+        "p_PatternColor": [
+          1.67588,
+          1.67588,
+          1.67588
+        ]
+      }
+    },
+    "Uncommon": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyA.png",
+        "p_Decal": "/static/textures/weapons/Logo_TedioreMaliwanVladof_Comp.png"
+      },
+      "scalars": {
+        "p_ShadowsIntensity": 8.0,
+        "p_DecalRotate": 0.0,
+        "p_UseFullColorDecal": 0.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.0,
+          0.795589,
+          0.270745
+        ],
+        "p_AColorMidtone": [
+          0.745829,
+          0.538881,
+          0.379109
+        ],
+        "p_AColorShadow": [
+          0.498966,
+          0.3791,
+          0.508269
+        ],
+        "p_BColorHilight": [
+          0.743823,
+          1.27035,
+          1.40308
+        ],
+        "p_BColorMidtone": [
+          0.107992,
+          0.12958,
+          0.160215
+        ],
+        "p_BColorShadow": [
+          0.0604394,
+          0.12688,
+          0.16574
+        ],
+        "p_CColorHilight": [
+          1.9052,
+          1.84827,
+          0.153722
+        ],
+        "p_CColorMidtone": [
+          1.49584,
+          0.844125,
+          0.412377
+        ],
+        "p_CColorShadow": [
+          0.541417,
+          0.0890401,
+          0.0837719
+        ],
+        "p_ReflectColor": [
+          0.784538,
+          1.0,
+          0.801564
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          0.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          8.84956,
+          76.3359,
+          0.4251
+        ],
+        "p_DecalColor": [
+          0.370152,
+          0.173836,
+          0.174796
+        ],
+        "p_PatternScalePosition": [
+          4.0,
+          4.0,
+          0.0
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.9,
+          0.8,
+          0.8
+        ],
+        "p_PatternColor": [
+          1.67588,
+          1.67588,
+          1.67588
+        ]
+      }
+    },
+    "Rare": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/Chrome.png",
+        "p_Decal": "/static/textures/weapons/Logo_TedioreMaliwanVladof_Comp.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_CarbonHexCheck_Comp.png"
+      },
+      "scalars": {
+        "p_ShadowsIntensity": 0.5,
+        "p_DecalRotate": 0.0,
+        "p_UseFullColorDecal": 0.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.799272,
+          0.900519,
+          0.686592
+        ],
+        "p_AColorMidtone": [
+          0.306385,
+          0.799772,
+          1.04624
+        ],
+        "p_AColorShadow": [
+          0.679533,
+          0.4492,
+          0.41674
+        ],
+        "p_BColorHilight": [
+          0.0805015,
+          0.0605276,
+          0.0828699
+        ],
+        "p_BColorMidtone": [
+          0.0541546,
+          0.0606689,
+          0.121542
+        ],
+        "p_BColorShadow": [
+          0.0493959,
+          0.0337932,
+          0.149166
+        ],
+        "p_CColorHilight": [
+          0.57185,
+          0.602188,
+          0.459132
+        ],
+        "p_CColorMidtone": [
+          0.135235,
+          0.381015,
+          0.4033
+        ],
+        "p_CColorShadow": [
+          0.0831986,
+          0.0227561,
+          0.143641
+        ],
+        "p_ReflectColor": [
+          1.53327,
+          1.64542,
+          1.30907
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          0.8,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          13.6986,
+          88.4956,
+          0.3571
+        ],
+        "p_DecalColor": [
+          1.27463,
+          1.24182,
+          0.41552
+        ],
+        "p_PatternScalePosition": [
+          22.0,
+          22.0,
+          0.5659
+        ],
+        "p_DecalChannel": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_PatternChannelScale": [
+          0.85,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          18.0886,
+          18.0886,
+          18.0886
+        ]
+      }
+    },
+    "Epic": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_SMG_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_SMG_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/Chrome.png",
+        "p_Decal": "/static/textures/weapons/Logo_TedioreMaliwanVladof_Comp.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_CarbonHexCheck_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png"
+      },
+      "scalars": {
+        "p_ShadowsIntensity": 2.0,
+        "p_DecalRotate": 0.0,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 0.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.103174,
+          0.177091,
+          0.287282
+        ],
+        "p_AColorMidtone": [
+          0.26293,
+          0.279127,
+          0.4033
+        ],
+        "p_AColorShadow": [
+          0.0403668,
+          0.144009,
+          0.23756
+        ],
+        "p_BColorHilight": [
+          0.130035,
+          0.157398,
+          0.331479
+        ],
+        "p_BColorMidtone": [
+          0.0399857,
+          0.0444566,
+          0.0552466
+        ],
+        "p_BColorShadow": [
+          0.0462007,
+          0.0399688,
+          0.0662959
+        ],
+        "p_CColorHilight": [
+          0.732889,
+          0.915964,
+          1.23972
+        ],
+        "p_CColorMidtone": [
+          0.594424,
+          0.73204,
+          1.26572
+        ],
+        "p_CColorShadow": [
+          0.0,
+          0.18865,
+          0.668484
+        ],
+        "p_ReflectColor": [
+          1.38706,
+          2.22238,
+          2.91915
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          0.4,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          15.0378,
+          92.6829,
+          0.3331
+        ],
+        "p_DecalColor": [
+          0.806466,
+          1.46922,
+          1.94617
+        ],
+        "p_PatternScalePosition": [
+          20.0,
+          20.0,
+          0.0
+        ],
+        "p_DColor": [
+          0.303856,
+          0.292462,
+          0.21688
+        ],
+        "p_DecalChannel": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          1.67588,
+          1.67588,
+          1.67588
+        ]
+      }
+    },
+    "Legendary": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_Launchers_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_LauncherShotgunPistol_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_Launchers_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/Chrome.png",
+        "p_Decal": "/static/textures/weapons/Logo_TedioreMaliwanVladof_Comp.png"
+      },
+      "scalars": {
+        "p_ShadowsIntensity": 2.0,
+        "p_DecalRotate": 0.0,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 0.0,
+        "p_ReplaceDecal": 1.0
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.13836,
+          0.606491,
+          0.699209
+        ],
+        "p_AColorMidtone": [
+          1.19867,
+          0.132489,
+          0.921176
+        ],
+        "p_AColorShadow": [
+          0.082931,
+          0.046878,
+          0.23756
+        ],
+        "p_BColorHilight": [
+          0.130035,
+          0.157398,
+          0.331479
+        ],
+        "p_BColorMidtone": [
+          0.0399857,
+          0.0444566,
+          0.0552466
+        ],
+        "p_BColorShadow": [
+          0.0462007,
+          0.0399688,
+          0.0662959
+        ],
+        "p_CColorHilight": [
+          0.732889,
+          0.915964,
+          1.23972
+        ],
+        "p_CColorMidtone": [
+          0.313467,
+          0.526105,
+          1.35073
+        ],
+        "p_CColorShadow": [
+          0.0,
+          0.18865,
+          0.668484
+        ],
+        "p_ReflectColor": [
+          0.774788,
+          1.24139,
+          1.63059
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          0.4,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          13.986,
+          121.951,
+          0.3528
+        ],
+        "p_DecalColor": [
+          0.806466,
+          1.46922,
+          1.94617
+        ],
+        "p_PatternScalePosition": [
+          20.0,
+          20.0,
+          0.0
+        ],
+        "p_DColor": [
+          0.303856,
+          0.292462,
+          0.21688
+        ],
+        "p_DecalChannel": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          1.67588,
+          1.67588,
+          1.67588
+        ]
+      }
+    }
+  },
+  "Torgue": {
+    "Common": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "p_Decal": "/static/textures/weapons/Logo_TorgueColor.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_TorgueRare.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 20.0,
+        "p_ShadowsIntensity": 20.0,
+        "p_DecalRotate": -0.0818,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.291
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.276233,
+          0.202215,
+          0.136406
+        ],
+        "p_AColorMidtone": [
+          1.35073,
+          1.22725,
+          1.17909
+        ],
+        "p_AColorShadow": [
+          1.0,
+          0.652574,
+          0.381238
+        ],
+        "p_BColorHilight": [
+          0.0828699,
+          0.0711596,
+          0.0614721
+        ],
+        "p_BColorMidtone": [
+          0.246019,
+          0.283446,
+          0.359103
+        ],
+        "p_BColorShadow": [
+          0.982493,
+          0.490879,
+          0.248702
+        ],
+        "p_CColorHilight": [
+          0.801075,
+          0.672431,
+          0.575366
+        ],
+        "p_CColorMidtone": [
+          0.185654,
+          0.244486,
+          0.41015
+        ],
+        "p_CColorShadow": [
+          0.767928,
+          0.394316,
+          0.173519
+        ],
+        "p_ReflectColor": [
+          1.49584,
+          1.49584,
+          1.49584
+        ],
+        "p_ReflectionChannelScale": [
+          0.7171,
+          0.3585,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          24.0385,
+          35.3357,
+          0.394
+        ],
+        "p_DecalColor": [
+          0.868714,
+          0.0384268,
+          0.0384268
+        ],
+        "p_PatternScalePosition": [
+          5.0044,
+          15.8021,
+          1.888
+        ],
+        "p_DecalChannel": [
+          0.0,
+          0.95,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          1.38166,
+          1.38166,
+          1.38166
+        ]
+      }
+    },
+    "Uncommon": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/SkySand.png",
+        "p_Decal": "/static/textures/weapons/Logo_TorgueColor.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_TorgueUncommon.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 1.0,
+        "p_ShadowsIntensity": 3.0,
+        "p_DecalRotate": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.7424
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.276233,
+          0.202215,
+          0.136406
+        ],
+        "p_AColorMidtone": [
+          2.01104,
+          1.79749,
+          1.47199
+        ],
+        "p_AColorShadow": [
+          0.600247,
+          0.665787,
+          0.944717
+        ],
+        "p_BColorHilight": [
+          1.03428,
+          0.923513,
+          0.69144
+        ],
+        "p_BColorMidtone": [
+          0.128452,
+          0.23756,
+          0.143293
+        ],
+        "p_BColorShadow": [
+          1.38166,
+          0.578855,
+          0.368173
+        ],
+        "p_CColorHilight": [
+          0.911569,
+          0.620601,
+          0.0902994
+        ],
+        "p_CColorMidtone": [
+          0.602188,
+          0.330359,
+          0.0
+        ],
+        "p_CColorShadow": [
+          1.0,
+          0.155179,
+          0.0162951
+        ],
+        "p_ReflectColor": [
+          1.49584,
+          1.49584,
+          1.49584
+        ],
+        "p_ReflectionChannelScale": [
+          0.7171,
+          0.3585,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          23.753,
+          35.3357,
+          0.4013
+        ],
+        "p_DecalColor": [
+          1.67588,
+          0.97585,
+          0.0
+        ],
+        "p_PatternScalePosition": [
+          2.7128,
+          21.318,
+          1.0472
+        ],
+        "p_DecalChannel": [
+          0.0,
+          0.95,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          1.60173,
+          1.60173,
+          1.60173
+        ]
+      }
+    },
+    "Rare": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/SkySand.png",
+        "p_Decal": "/static/textures/weapons/Logo_TorgueColor.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_TorgueRare.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 2.0,
+        "p_ShadowsIntensity": 3.0,
+        "p_DecalRotate": 0.0898,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.7424
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          1.84688,
+          1.84089,
+          1.67342
+        ],
+        "p_AColorMidtone": [
+          2.38015,
+          2.64936,
+          3.1439
+        ],
+        "p_AColorShadow": [
+          0.682556,
+          0.849806,
+          1.43648
+        ],
+        "p_BColorHilight": [
+          1.23128,
+          1.17254,
+          0.963795
+        ],
+        "p_BColorMidtone": [
+          0.246019,
+          0.283446,
+          0.359103
+        ],
+        "p_BColorShadow": [
+          0.457317,
+          0.55705,
+          0.834223
+        ],
+        "p_CColorHilight": [
+          0.930265,
+          0.983352,
+          1.0
+        ],
+        "p_CColorMidtone": [
+          0.0530422,
+          0.0902043,
+          0.458547
+        ],
+        "p_CColorShadow": [
+          0.319416,
+          0.352595,
+          0.397775
+        ],
+        "p_ReflectColor": [
+          0.72373,
+          0.72373,
+          0.72373
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          0.3,
+          0.4
+        ],
+        "p_DecalScalePosition": [
+          12.3762,
+          17.8891,
+          0.4025
+        ],
+        "p_DecalColor": [
+          3.77045,
+          3.77045,
+          3.77045
+        ],
+        "p_PatternScalePosition": [
+          4.8042,
+          15.8021,
+          1.888
+        ],
+        "p_DecalChannel": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          1.38166,
+          1.38166,
+          1.38166
+        ]
+      }
+    },
+    "Epic": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/Chrome.png",
+        "p_Decal": "/static/textures/weapons/Logo_TorgueColor.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_TorgueEpic.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 3.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.0,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.7424
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.383275,
+          0.581389,
+          1.60173
+        ],
+        "p_AColorMidtone": [
+          1.82823,
+          1.82823,
+          1.82823
+        ],
+        "p_AColorShadow": [
+          0.682556,
+          0.849806,
+          1.43648
+        ],
+        "p_BColorHilight": [
+          0.486473,
+          0.842811,
+          1.63053
+        ],
+        "p_BColorMidtone": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_BColorShadow": [
+          0.457317,
+          0.55705,
+          0.834223
+        ],
+        "p_CColorHilight": [
+          0.231273,
+          0.244471,
+          0.24861
+        ],
+        "p_CColorMidtone": [
+          0.143641,
+          0.141627,
+          0.142146
+        ],
+        "p_CColorShadow": [
+          0.04775,
+          0.1866,
+          0.375677
+        ],
+        "p_ReflectColor": [
+          3.23188,
+          3.23188,
+          3.23188
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          18.018,
+          25.7732,
+          0.4004
+        ],
+        "p_DecalColor": [
+          1.88536,
+          1.88536,
+          1.88536
+        ],
+        "p_PatternScalePosition": [
+          7.4283,
+          35.9205,
+          0.3895
+        ],
+        "p_DecalChannel": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          0.646385,
+          0.646385,
+          0.646385
+        ]
+      }
+    },
+    "Legendary": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/Chrome.png",
+        "p_Decal": "/static/textures/weapons/Logo_TorgueColor.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_Torgue_Legendary.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 3.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.0,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.7424
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.383275,
+          0.581389,
+          1.60173
+        ],
+        "p_AColorMidtone": [
+          1.82823,
+          1.82823,
+          1.82823
+        ],
+        "p_AColorShadow": [
+          0.682556,
+          0.849806,
+          1.43648
+        ],
+        "p_BColorHilight": [
+          0.490453,
+          0.513793,
+          0.467112
+        ],
+        "p_BColorMidtone": [
+          0.144657,
+          0.23141,
+          0.545421
+        ],
+        "p_BColorShadow": [
+          0.080344,
+          0.0384889,
+          0.209937
+        ],
+        "p_CColorHilight": [
+          1.88536,
+          1.5399,
+          1.29575
+        ],
+        "p_CColorMidtone": [
+          3.29063,
+          1.8739,
+          0.490971
+        ],
+        "p_CColorShadow": [
+          0.298332,
+          0.098895,
+          0.0884059
+        ],
+        "p_ReflectColor": [
+          3.23188,
+          3.23188,
+          3.23188
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          0.2,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          21.8284,
+          27.8351,
+          0.3941
+        ],
+        "p_DecalColor": [
+          1.9052,
+          0.0,
+          0.0
+        ],
+        "p_PatternScalePosition": [
+          2.3314,
+          27.2996,
+          0.8379
+        ],
+        "p_DColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalChannel": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          0.646385,
+          0.646385,
+          0.646385
+        ]
+      }
+    }
+  },
+  "Vladof": {
+    "Common": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "p_Decal": "/static/textures/weapons/Logo_TedioreMaliwanVladof_Comp.png",
+        "p_Pattern": "/static/textures/weapons/VladovMetalCommon_Dif.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 3.0,
+        "p_ShadowsIntensity": 3.0,
+        "p_DecalRotate": -0.1,
+        "p_UseFullColorDecal": 0.0,
+        "p_ReplaceDecal": 0.37
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.745829,
+          0.503625,
+          0.424434
+        ],
+        "p_AColorMidtone": [
+          1.33087,
+          1.26609,
+          1.14705
+        ],
+        "p_AColorShadow": [
+          1.20628,
+          1.26572,
+          1.14685
+        ],
+        "p_BColorHilight": [
+          0.579941,
+          0.632637,
+          0.690582
+        ],
+        "p_BColorMidtone": [
+          0.6984,
+          0.776767,
+          0.861847
+        ],
+        "p_BColorShadow": [
+          0.911569,
+          0.654427,
+          0.523789
+        ],
+        "p_CColorHilight": [
+          0.97126,
+          1.0,
+          0.990476
+        ],
+        "p_CColorMidtone": [
+          1.0,
+          0.784317,
+          0.607749
+        ],
+        "p_CColorShadow": [
+          0.624286,
+          0.500617,
+          0.417348
+        ],
+        "p_DecalScalePosition": [
+          1.49254,
+          4.7619,
+          0.32
+        ],
+        "p_DecalColor": [
+          2.78823,
+          3.15636,
+          3.48045
+        ],
+        "p_PatternScalePosition": [
+          12.0,
+          12.0,
+          0.8
+        ],
+        "p_DColor": [
+          0.466925,
+          0.524896,
+          0.657434
+        ],
+        "p_DecalChannel": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.92,
+          0.85,
+          0.85
+        ],
+        "p_PatternColor": [
+          3.29063,
+          3.29063,
+          3.29063
+        ]
+      }
+    },
+    "Uncommon": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/VladovMetalCommon_Dif.png",
+        "p_Decal": "/static/textures/weapons/Icon_StarNoneNone_Comp.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_JakobsUncommonWood.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 4.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.0,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 0.0,
+        "p_ReplaceDecal": 0.69
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          2.09002,
+          2.09002,
+          2.09002
+        ],
+        "p_AColorMidtone": [
+          2.82793,
+          2.39493,
+          2.36852
+        ],
+        "p_AColorShadow": [
+          0.380734,
+          0.45982,
+          1.0
+        ],
+        "p_BColorHilight": [
+          1.40927,
+          1.42719,
+          1.75723
+        ],
+        "p_BColorMidtone": [
+          0.202186,
+          0.214055,
+          0.254134
+        ],
+        "p_BColorShadow": [
+          0.373149,
+          0.577167,
+          0.751354
+        ],
+        "p_CColorHilight": [
+          0.469208,
+          0.516507,
+          0.696107
+        ],
+        "p_CColorMidtone": [
+          0.289274,
+          0.312385,
+          0.359103
+        ],
+        "p_CColorShadow": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p_ReflectColor": [
+          1.72376,
+          1.72376,
+          1.72376
+        ],
+        "p_ReflectionChannelScale": [
+          0.0,
+          1.5,
+          6.0
+        ],
+        "p_DecalScalePosition": [
+          16.6667,
+          16.6667,
+          0.415
+        ],
+        "p_DecalColor": [
+          0.16574,
+          0.0,
+          0.000429217
+        ],
+        "p_PatternScalePosition": [
+          8.16,
+          6.96,
+          0.8
+        ],
+        "p_DColor": [
+          0.466925,
+          0.524896,
+          0.657434
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.85,
+          0.88
+        ],
+        "p_PatternColor": [
+          1.7075,
+          1.7075,
+          1.7075
+        ]
+      }
+    },
+    "Rare": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyA.png",
+        "p_Decal": "/static/textures/weapons/Icon_StarNoneNone_Comp.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 3.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.0,
+        "p_ReplacePattern": 0.0,
+        "p_UseFullColorDecal": 0.0,
+        "p_ReplaceDecal": 0.45
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.671748,
+          0.733021,
+          1.0
+        ],
+        "p_AColorMidtone": [
+          0.073878,
+          0.0963456,
+          0.104969
+        ],
+        "p_AColorShadow": [
+          0.332219,
+          0.442344,
+          0.602188
+        ],
+        "p_BColorHilight": [
+          0.386247,
+          0.438639,
+          0.629811
+        ],
+        "p_BColorMidtone": [
+          0.113376,
+          0.142983,
+          0.16574
+        ],
+        "p_BColorShadow": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p_CColorHilight": [
+          3.12045,
+          3.12045,
+          3.12045
+        ],
+        "p_CColorMidtone": [
+          1.49584,
+          1.49584,
+          1.49584
+        ],
+        "p_CColorShadow": [
+          0.525379,
+          0.644275,
+          1.01117
+        ],
+        "p_ReflectColor": [
+          2.13952,
+          2.51411,
+          2.82793
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          16.6667,
+          16.6667,
+          0.415
+        ],
+        "p_DecalColor": [
+          1.60173,
+          0.0,
+          0.0052234
+        ],
+        "p_PatternScalePosition": [
+          30.0,
+          30.0,
+          0.8
+        ],
+        "p_DColor": [
+          0.729255,
+          0.729255,
+          0.729255
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Epic": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyC.png",
+        "p_Decal": "/static/textures/weapons/Logo_VladofColor.png"
+      },
+      "scalars": {
+        "p_HighlightsIntensity": 3.0,
+        "p_ShadowsIntensity": 4.0,
+        "p_DecalRotate": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.43
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.765312,
+          0.85809,
+          1.0
+        ],
+        "p_AColorMidtone": [
+          1.37498,
+          1.42133,
+          1.50831
+        ],
+        "p_AColorShadow": [
+          0.166877,
+          0.258811,
+          0.392251
+        ],
+        "p_BColorHilight": [
+          1.74991,
+          2.06869,
+          3.23188
+        ],
+        "p_BColorMidtone": [
+          1.08435,
+          1.22399,
+          1.65968
+        ],
+        "p_BColorShadow": [
+          0.72747,
+          0.829674,
+          1.0
+        ],
+        "p_CColorHilight": [
+          0.795032,
+          0.871191,
+          1.0
+        ],
+        "p_CColorMidtone": [
+          0.565168,
+          0.601708,
+          0.635373
+        ],
+        "p_CColorShadow": [
+          0.522249,
+          0.697401,
+          1.01117
+        ],
+        "p_ReflectColor": [
+          1.89603,
+          2.12533,
+          2.35053
+        ],
+        "p_ReflectionChannelScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_DecalScalePosition": [
+          16.6667,
+          16.6667,
+          0.415
+        ],
+        "p_DecalColor": [
+          3.06756,
+          3.06756,
+          3.06756
+        ],
+        "p_PatternScalePosition": [
+          30.0,
+          30.0,
+          0.8
+        ],
+        "p_DColor": [
+          1.14287,
+          1.28718,
+          1.67588
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternColor": [
+          1.12212,
+          1.33244,
+          1.57388
+        ]
+      }
+    },
+    "Legendary": {
+      "textures": {
+        "p_Masks": "/static/textures/weapons/Weap_AssaultRifle_Comp.png",
+        "p_Diffuse": "/static/textures/weapons/Weap_AssaultSubSniper_Comp.png",
+        "p_NormalScopesEmissive": "/static/textures/weapons/Weap_AssaultRifle_Nrm.png",
+        "P_SimpleReflect": "/static/textures/weapons/GlossyC.png",
+        "p_Decal": "/static/textures/weapons/FacePaint_SirenBanditCommon.png",
+        "p_Pattern": "/static/textures/weapons/Pattern_RedSpectrum.png"
+      },
+      "scalars": {
+        "p_DecalRotate": 0.0,
+        "p_UseFullColorDecal": 1.0,
+        "p_ReplaceDecal": 0.43
+      },
+      "vectors": {
+        "p_AColorHilight": [
+          0.0733825,
+          0.0572393,
+          0.0773452
+        ],
+        "p_AColorMidtone": [
+          0.0620851,
+          0.0750734,
+          0.0994439
+        ],
+        "p_AColorShadow": [
+          0.115169,
+          0.178616,
+          0.270708
+        ],
+        "p_BColorHilight": [
+          2.33913,
+          2.53116,
+          3.23188
+        ],
+        "p_BColorMidtone": [
+          0.761706,
+          0.833945,
+          0.88947
+        ],
+        "p_BColorShadow": [
+          0.694526,
+          0.518524,
+          1.0
+        ],
+        "p_CColorHilight": [
+          1.54698,
+          0.101052,
+          0.0855222
+        ],
+        "p_CColorMidtone": [
+          1.23972,
+          0.100508,
+          0.104934
+        ],
+        "p_CColorShadow": [
+          0.270708,
+          0.0239391,
+          0.0466237
+        ],
+        "p_EmissiveColor": [
+          2.92429,
+          3.41479,
+          3.19007
+        ],
+        "p_ReflectColor": [
+          1.43607,
+          1.89743,
+          2.35053
+        ],
+        "p_ReflectionChannelScale": [
+          0.4,
+          1.0,
+          0.6
+        ],
+        "p_DecalScalePosition": [
+          15.1667,
+          13.1733,
+          0.4161
+        ],
+        "p_DecalColor": [
+          3.16438,
+          0.0242854,
+          0.0
+        ],
+        "p_PatternScalePosition": [
+          1.2,
+          30.0,
+          0.6212
+        ],
+        "p_DColor": [
+          0.320143,
+          0.586774,
+          0.629811
+        ],
+        "p_DecalChannel": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "p_PatternChannelScale": [
+          0.8,
+          1.0,
+          1.0
+        ],
+        "p_PatternColor": [
+          1.12212,
+          1.33244,
+          1.57388
+        ]
+      }
+    }
+  }
+}

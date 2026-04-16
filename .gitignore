@@ -1,0 +1,47 @@
+# Binaries
+*.exe
+*.zip
+*.bak
+*.dll
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Logs
+*.log
+
+# Config (contains user-specific paths)
+config.json
+
+# IDE / tool state
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+
+# Test/cache
+.pytest_cache/
+*.tmp
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ────────────────────────────────────────────────────────────────
+# Game-asset extracts (UModel output) — re-derivable, IP-sensitive
+# Users must extract these locally; see README "Asset Setup".
+# ────────────────────────────────────────────────────────────────
+static/models/
+static/textures/
+UmodelSaved/
+
+# Local assistant memory
+memory/

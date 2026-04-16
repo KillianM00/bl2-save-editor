@@ -1,0 +1,367 @@
+{
+  "GD_Soldier": {
+    "class": "Axton",
+    "action_skill": {
+      "path": "GD_Soldier_Skills.Scorpio.Skill_Scorpio",
+      "name": "Sabre Turret",
+      "description": "Deploy a Sabre Turret that automatically fires at enemies."
+    },
+    "trees": {
+      "Guerrilla": {
+        "name": "Guerrilla",
+        "color": "#ff4444",
+        "skills": [
+          {"path": "GD_Soldier_Skills.Guerrilla.Sentry", "name": "Sentry", "tier": 1, "col": 0, "max": 5, "desc": "+1 shot per burst and +2s duration per point."},
+          {"path": "GD_Soldier_Skills.Guerrilla.Ready", "name": "Ready", "tier": 1, "col": 1, "max": 5, "desc": "+8% Reload Speed per point."},
+          {"path": "GD_Soldier_Skills.Guerrilla.LaserSight", "name": "Laser Sight", "tier": 1, "col": 2, "max": 5, "desc": "+20% Turret Accuracy per point."},
+          {"path": "GD_Soldier_Skills.Guerrilla.Willing", "name": "Willing", "tier": 2, "col": 0, "max": 5, "desc": "+15% Shield Recharge Rate, -12% Recharge Delay per point."},
+          {"path": "GD_Soldier_Skills.Guerrilla.Onslaught", "name": "Onslaught", "tier": 2, "col": 2, "max": 5, "desc": "Kill Skill: +6% Gun Damage, +12% Movement Speed per point."},
+          {"path": "GD_Soldier_Skills.Guerrilla.ScorchedEarth", "name": "Scorched Earth", "tier": 3, "col": 1, "max": 1, "desc": "Turret fires rockets in addition to bullets."},
+          {"path": "GD_Soldier_Skills.Guerrilla.Able", "name": "Able", "tier": 3, "col": 2, "max": 5, "desc": "Damaging an enemy regenerates 0.4% max HP/s per point."},
+          {"path": "GD_Soldier_Skills.Guerrilla.Grenadier", "name": "Grenadier", "tier": 4, "col": 0, "max": 5, "desc": "+1 Grenade per point."},
+          {"path": "GD_Soldier_Skills.Guerrilla.CrisisManagement", "name": "Crisis Management", "tier": 4, "col": 2, "max": 5, "desc": "+7% Gun Damage, +6% Melee Damage when shields are depleted."},
+          {"path": "GD_Soldier_Skills.Guerrilla.DoubleUp", "name": "Double Up", "tier": 6, "col": 1, "max": 1, "desc": "Turret fires slag rounds and adds a second gun."}
+        ]
+      },
+      "Gunpowder": {
+        "name": "Gunpowder",
+        "color": "#4488ff",
+        "skills": [
+          {"path": "GD_Soldier_Skills.Gunpowder.Impact", "name": "Impact", "tier": 1, "col": 0, "max": 5, "desc": "+4% Gun Damage, +3% Melee Damage per point."},
+          {"path": "GD_Soldier_Skills.Gunpowder.Expertise", "name": "Expertise", "tier": 1, "col": 1, "max": 5, "desc": "+14% Weapon Swap Speed, +7% Aim Speed per point."},
+          {"path": "GD_Soldier_Skills.Gunpowder.Overload", "name": "Overload", "tier": 1, "col": 2, "max": 5, "desc": "+8% Magazine Size per point (Assault Rifles only)."},
+          {"path": "GD_Soldier_Skills.Gunpowder.MetalStorm", "name": "Metal Storm", "tier": 2, "col": 0, "max": 5, "desc": "Kill Skill: +12% Fire Rate, +15% Recoil Reduction per point."},
+          {"path": "GD_Soldier_Skills.Gunpowder.Steady", "name": "Steady", "tier": 2, "col": 2, "max": 5, "desc": "+8% Recoil Reduction, +5% Rocket Launcher Damage per point."},
+          {"path": "GD_Soldier_Skills.Gunpowder.LongBowTurret", "name": "Longbow Turret", "tier": 3, "col": 1, "max": 1, "desc": "Turret deploys via longbow with +110% HP."},
+          {"path": "GD_Soldier_Skills.Gunpowder.Battlefront", "name": "Battlefront", "tier": 3, "col": 2, "max": 5, "desc": "+6% Gun, Melee, and Grenade Damage while turret is deployed."},
+          {"path": "GD_Soldier_Skills.Gunpowder.DutyCalls", "name": "Duty Calls", "tier": 4, "col": 0, "max": 5, "desc": "+8% Gun Damage, +5% Fire Rate with non-elemental guns."},
+          {"path": "GD_Soldier_Skills.Gunpowder.DoOrDie", "name": "Do or Die", "tier": 4, "col": 2, "max": 5, "desc": "Throw grenades and fire rockets in FFYL. +10% Grenade/RL Damage."},
+          {"path": "GD_Soldier_Skills.Gunpowder.Ranger", "name": "Ranger", "tier": 5, "col": 1, "max": 5, "desc": "+1% to Gun Damage, Accuracy, Crit Damage, Fire Rate, Magazine Size, Reload Speed, Max Health, Shield Capacity per point."},
+          {"path": "GD_Soldier_Skills.Gunpowder.Nuke", "name": "Nuke", "tier": 6, "col": 1, "max": 1, "desc": "Deploying turret triggers a small nuclear blast."}
+        ]
+      },
+      "Survival": {
+        "name": "Survival",
+        "color": "#44cc44",
+        "skills": [
+          {"path": "GD_Soldier_Skills.Survival.HealthY", "name": "Healthy", "tier": 1, "col": 0, "max": 5, "desc": "+6% Max Health per point."},
+          {"path": "GD_Soldier_Skills.Survival.Preparation", "name": "Preparation", "tier": 1, "col": 1, "max": 5, "desc": "+3% Shield Capacity, regenerate 0.4% HP/s when shields full."},
+          {"path": "GD_Soldier_Skills.Survival.LastDitchEffort", "name": "Last Ditch Effort", "tier": 1, "col": 2, "max": 5, "desc": "+8% Gun Damage, +14% Movement Speed in FFYL per point."},
+          {"path": "GD_Soldier_Skills.Survival.Pressure", "name": "Pressure", "tier": 2, "col": 0, "max": 5, "desc": "Up to +14% Reload Speed, -12% Shield Delay at low HP."},
+          {"path": "GD_Soldier_Skills.Survival.Forbearance", "name": "Forbearance", "tier": 2, "col": 2, "max": 5, "desc": "-8% Status Effect Duration, +1% Max Health per point."},
+          {"path": "GD_Soldier_Skills.Survival.PhalanxShield", "name": "Phalanx Shield", "tier": 3, "col": 1, "max": 1, "desc": "Turret projects a shield that blocks enemy projectiles."},
+          {"path": "GD_Soldier_Skills.Survival.QuickCharge", "name": "Quick Charge", "tier": 3, "col": 2, "max": 5, "desc": "Kill Skill: regenerate 1% shield/s per point."},
+          {"path": "GD_Soldier_Skills.Survival.Resourceful", "name": "Resourceful", "tier": 4, "col": 0, "max": 5, "desc": "-5% Action Skill Cooldown per point."},
+          {"path": "GD_Soldier_Skills.Survival.Mag-Lock", "name": "Mag-Lock", "tier": 4, "col": 2, "max": 1, "desc": "Turret can be deployed on walls and ceilings."},
+          {"path": "GD_Soldier_Skills.Survival.Grit", "name": "Grit", "tier": 5, "col": 1, "max": 5, "desc": "Chance to ignore lethal damage and heal to full."},
+          {"path": "GD_Soldier_Skills.Survival.Gemini", "name": "Gemini", "tier": 6, "col": 1, "max": 1, "desc": "Deploy two turrets simultaneously."}
+        ]
+      }
+    }
+  },
+  "GD_Assassin": {
+    "class": "Zer0",
+    "action_skill": {
+      "path": "GD_Assassin_Skills.ActionSkill.Skill_Deception",
+      "name": "Decepti0n",
+      "description": "Become invisible and deploy a holographic decoy."
+    },
+    "trees": {
+      "Sniping": {
+        "name": "Sniping",
+        "color": "#4488ff",
+        "skills": [
+          {"path": "GD_Assassin_Skills.Sniping.HeadShot", "name": "Headsh0t", "tier": 1, "col": 0, "max": 5, "desc": "+4% Critical Hit Damage per point."},
+          {"path": "GD_Assassin_Skills.Sniping.Optics", "name": "0ptics", "tier": 1, "col": 1, "max": 5, "desc": "+12% Zoom, +3% Aim Steadiness per point."},
+          {"path": "GD_Assassin_Skills.Sniping.Killer", "name": "Killer", "tier": 1, "col": 2, "max": 5, "desc": "Kill Skill: +10% Crit Damage, +15% Reload Speed per point."},
+          {"path": "GD_Assassin_Skills.Sniping.Precision", "name": "Precisi0n", "tier": 2, "col": 0, "max": 5, "desc": "+5% Accuracy per point."},
+          {"path": "GD_Assassin_Skills.Sniping.OneShot", "name": "0ne Sh0t 0ne Kill", "tier": 2, "col": 2, "max": 5, "desc": "+12% Damage on first shot in magazine per point."},
+          {"path": "GD_Assassin_Skills.Sniping.Bore", "name": "B0re", "tier": 3, "col": 1, "max": 1, "desc": "Shots pierce enemies and deal bonus damage."},
+          {"path": "GD_Assassin_Skills.Sniping.Velocity", "name": "Vel0city", "tier": 3, "col": 2, "max": 5, "desc": "+20% Bullet Speed, +3% Gun Damage, +2% Crit per point."},
+          {"path": "GD_Assassin_Skills.Sniping.KillConfirmed", "name": "Kill C0nfirmed", "tier": 4, "col": 0, "max": 5, "desc": "Up to +8% Crit Damage per point (stacks while aiming)."},
+          {"path": "GD_Assassin_Skills.Sniping.AtOneWithTheGun", "name": "At 0ne with the Gun", "tier": 4, "col": 2, "max": 5, "desc": "+15% Hip-fire Accuracy, +10% Magazine Size (snipers)."},
+          {"path": "GD_Assassin_Skills.Sniping.CriticalAscension", "name": "Critical Ascensi0n", "tier": 5, "col": 1, "max": 5, "desc": "Each critical hit adds a stack giving +6% Sniper Damage, +5% Crit."},
+          {"path": "GD_Assassin_Skills.Sniping.Unforseen", "name": "Unf0reseen", "tier": 6, "col": 1, "max": 1, "desc": "Decoy explodes dealing shock damage when it expires."}
+        ]
+      },
+      "Cunning": {
+        "name": "Cunning",
+        "color": "#ff4444",
+        "skills": [
+          {"path": "GD_Assassin_Skills.Cunning.FastHands", "name": "Fast Hands", "tier": 1, "col": 0, "max": 5, "desc": "+8% Reload Speed, +10% Weapon Swap Speed per point."},
+          {"path": "GD_Assassin_Skills.Cunning.CounterStrike", "name": "C0unter Strike", "tier": 1, "col": 1, "max": 5, "desc": "+8% Melee Damage after being damaged per point."},
+          {"path": "GD_Assassin_Skills.Cunning.Fearless", "name": "Fearless", "tier": 1, "col": 2, "max": 5, "desc": "+5% Fire Rate, +3% Gun Damage when shields are depleted."},
+          {"path": "GD_Assassin_Skills.Cunning.Ambush", "name": "Ambush", "tier": 2, "col": 0, "max": 5, "desc": "+4% Damage when attacking from behind or an unaware enemy."},
+          {"path": "GD_Assassin_Skills.Cunning.RisingShot", "name": "Rising Sh0t", "tier": 2, "col": 2, "max": 5, "desc": "Each hit gives +2% Gun Damage, +1.8% Melee Damage (stacks 5x)."},
+          {"path": "GD_Assassin_Skills.Cunning.DeathMark", "name": "Death Mark", "tier": 3, "col": 1, "max": 1, "desc": "Melee overrides mark enemies, taking +20% extra damage."},
+          {"path": "GD_Assassin_Skills.Cunning.Innervate", "name": "Innervate", "tier": 3, "col": 2, "max": 5, "desc": "+2% Gun Damage, +7% Movement Speed, +0.8% HP regen during Decepti0n."},
+          {"path": "GD_Assassin_Skills.Cunning.TwoFang", "name": "Tw0 Fang", "tier": 4, "col": 0, "max": 5, "desc": "+6% chance to fire twice per point."},
+          {"path": "GD_Assassin_Skills.Cunning.DeathBlossom", "name": "Death Bl0ss0m", "tier": 4, "col": 2, "max": 5, "desc": "Action Skill throws kunai dealing random elements. +2% Death Mark."},
+          {"path": "GD_Assassin_Skills.Cunning.Followthrough", "name": "Followthrough", "tier": 5, "col": 1, "max": 5, "desc": "Kill Skill: +8% Movement Speed, +6% Gun Damage, +5% Melee Damage."},
+          {"path": "GD_Assassin_Skills.Cunning.Execute", "name": "Execute", "tier": 6, "col": 1, "max": 1, "desc": "During Decepti0n, dash to melee target with massive bonus damage."}
+        ]
+      },
+      "Bloodshed": {
+        "name": "Bloodshed",
+        "color": "#44cc44",
+        "skills": [
+          {"path": "GD_Assassin_Skills.Bloodshed.Killing_Blow", "name": "Killing Bl0w", "tier": 1, "col": 0, "max": 5, "desc": "+100% Melee Damage against enemies with low health per point."},
+          {"path": "GD_Assassin_Skills.Bloodshed.IronHand", "name": "Ir0n Hand", "tier": 1, "col": 1, "max": 5, "desc": "+3% Melee Damage, +3% Max Health per point."},
+          {"path": "GD_Assassin_Skills.Bloodshed.Grim", "name": "Grim", "tier": 1, "col": 2, "max": 5, "desc": "Kill Skill: +1.4% shield regen/s, -0.7s cooldown per point."},
+          {"path": "GD_Assassin_Skills.Bloodshed.BeLikeWater", "name": "Be Like Water", "tier": 2, "col": 0, "max": 5, "desc": "+4% Gun Damage after melee, +3% Melee after shooting."},
+          {"path": "GD_Assassin_Skills.Bloodshed.Resurgence", "name": "Resurgence", "tier": 2, "col": 2, "max": 5, "desc": "Melee kills restore up to 4% max HP per point."},
+          {"path": "GD_Assassin_Skills.Bloodshed.Execute", "name": "Execute", "tier": 3, "col": 1, "max": 1, "desc": "During Decepti0n, dash to melee target with massive damage."},
+          {"path": "GD_Assassin_Skills.Bloodshed.Backstab", "name": "Backstab", "tier": 3, "col": 2, "max": 5, "desc": "+8% Melee Damage from behind per point."},
+          {"path": "GD_Assassin_Skills.Bloodshed.Followthrough", "name": "Followthrough", "tier": 4, "col": 0, "max": 5, "desc": "Kill Skill: +8% Movement Speed, +6% Gun Damage, +5% Melee Damage."},
+          {"path": "GD_Assassin_Skills.Bloodshed.LikeTheWind", "name": "Like the Wind", "tier": 4, "col": 2, "max": 5, "desc": "+3% Gun Damage, +4% Melee Damage while moving."},
+          {"path": "GD_Assassin_Skills.Bloodshed.ManyMustFall", "name": "Many Must Fall", "tier": 5, "col": 1, "max": 5, "desc": "Melee kill during Decepti0n restarts it. +5% Action Skill Duration."},
+          {"path": "GD_Assassin_Skills.Bloodshed.Unforseen", "name": "Unf0reseen", "tier": 6, "col": 1, "max": 1, "desc": "Decoy explodes dealing shock damage."}
+        ]
+      }
+    }
+  },
+  "GD_Siren": {
+    "class": "Maya",
+    "action_skill": {
+      "path": "GD_Siren_Skills.Phaselock.Skill_Phaselock",
+      "name": "Phaselock",
+      "description": "Suspend an enemy in midair, dealing damage over time."
+    },
+    "trees": {
+      "Motion": {
+        "name": "Motion",
+        "color": "#4488ff",
+        "skills": [
+          {"path": "GD_Siren_Skills.Motion.Ward", "name": "Ward", "tier": 1, "col": 0, "max": 5, "desc": "+5% Shield Capacity, -8% Shield Recharge Delay per point."},
+          {"path": "GD_Siren_Skills.Motion.Accelerate", "name": "Accelerate", "tier": 1, "col": 1, "max": 5, "desc": "+3% Gun Damage, +4% Bullet Speed per point."},
+          {"path": "GD_Siren_Skills.Motion.Suspension", "name": "Suspension", "tier": 1, "col": 2, "max": 5, "desc": "+0.5s Phaselock Duration per point."},
+          {"path": "GD_Siren_Skills.Motion.KineticReflection", "name": "Kinetic Reflection", "tier": 2, "col": 0, "max": 5, "desc": "Kill Skill: deflect bullets. +10% chance, -5% damage taken per point."},
+          {"path": "GD_Siren_Skills.Motion.Fleet", "name": "Fleet", "tier": 2, "col": 2, "max": 5, "desc": "+10% Movement Speed when shields are depleted per point."},
+          {"path": "GD_Siren_Skills.Motion.Converge", "name": "Converge", "tier": 3, "col": 1, "max": 1, "desc": "Phaselock pulls nearby enemies in."},
+          {"path": "GD_Siren_Skills.Motion.Inertia", "name": "Inertia", "tier": 3, "col": 2, "max": 5, "desc": "Kill Skill: +10% Reload Speed, +0.8% shield regen/s per point."},
+          {"path": "GD_Siren_Skills.Motion.Quicken", "name": "Quicken", "tier": 4, "col": 0, "max": 5, "desc": "+6% Action Skill Cooldown Rate per point."},
+          {"path": "GD_Siren_Skills.Motion.SubSequence", "name": "Sub-Sequence", "tier": 4, "col": 2, "max": 5, "desc": "Phaselock seeks new target on kill. +20% chance per point."},
+          {"path": "GD_Siren_Skills.Motion.Thoughtlock", "name": "Thoughtlock", "tier": 5, "col": 1, "max": 1, "desc": "Phaselock turns enemy into ally. +4s duration."},
+          {"path": "GD_Siren_Skills.Motion.Quicken2", "name": "Quicken", "tier": 6, "col": 1, "max": 0}
+        ]
+      },
+      "Harmony": {
+        "name": "Harmony",
+        "color": "#44cc44",
+        "skills": [
+          {"path": "GD_Siren_Skills.Harmony.MindControl", "name": "Mind's Eye", "tier": 1, "col": 0, "max": 5, "desc": "+5% Crit Damage, +6% Melee Damage per point."},
+          {"path": "GD_Siren_Skills.Harmony.SweetRelease", "name": "Sweet Release", "tier": 1, "col": 1, "max": 5, "desc": "Kill Phaselocked enemy: heal orbs restore 3% max HP per point."},
+          {"path": "GD_Siren_Skills.Harmony.Restoration", "name": "Restoration", "tier": 1, "col": 2, "max": 5, "desc": "+3% Max Health. Shooting allies heals them."},
+          {"path": "GD_Siren_Skills.Harmony.Wreck", "name": "Wreck", "tier": 2, "col": 0, "max": 5, "desc": "+6% Fire Rate, +5% Gun Damage while Phaselock is active."},
+          {"path": "GD_Siren_Skills.Harmony.Elated", "name": "Elated", "tier": 2, "col": 2, "max": 5, "desc": "+1% HP regen/s for you and allies while Phaselock active."},
+          {"path": "GD_Siren_Skills.Harmony.Res", "name": "Res", "tier": 3, "col": 1, "max": 1, "desc": "Phaselock revives downed allies instantly."},
+          {"path": "GD_Siren_Skills.Harmony.Recompense", "name": "Recompense", "tier": 3, "col": 2, "max": 5, "desc": "+10% chance to deal damage back to attacker per point."},
+          {"path": "GD_Siren_Skills.Harmony.Sustenance", "name": "Sustenance", "tier": 4, "col": 0, "max": 5, "desc": "Regenerate up to 0.4% max HP/s per point (more at low HP)."},
+          {"path": "GD_Siren_Skills.Harmony.LifeTap", "name": "Life Tap", "tier": 4, "col": 2, "max": 5, "desc": "Kill Skill: 1.2% of damage dealt heals you per point."},
+          {"path": "GD_Siren_Skills.Harmony.Scorn", "name": "Scorn", "tier": 5, "col": 1, "max": 1, "desc": "Melee Override: throw a slag orb that bounces between enemies."},
+          {"path": "GD_Siren_Skills.Harmony.SustainedScorn", "name": "Sustained Scorn", "tier": 6, "col": 1, "max": 0}
+        ]
+      },
+      "Cataclysm": {
+        "name": "Cataclysm",
+        "color": "#ff4444",
+        "skills": [
+          {"path": "GD_Siren_Skills.Cataclysm.Flicker", "name": "Flicker", "tier": 1, "col": 0, "max": 5, "desc": "+6% Elemental Effect Chance per point."},
+          {"path": "GD_Siren_Skills.Cataclysm.Foresight", "name": "Foresight", "tier": 1, "col": 1, "max": 5, "desc": "+4% Magazine Size, +10% Reload Speed per point."},
+          {"path": "GD_Siren_Skills.Cataclysm.Immolate", "name": "Immolate", "tier": 1, "col": 2, "max": 5, "desc": "+10% bonus fire damage in FFYL per point."},
+          {"path": "GD_Siren_Skills.Cataclysm.Helios", "name": "Helios", "tier": 2, "col": 0, "max": 5, "desc": "Phaselock causes a fire nova."},
+          {"path": "GD_Siren_Skills.Cataclysm.ChainReaction", "name": "Chain Reaction", "tier": 2, "col": 2, "max": 5, "desc": "While Phaselock active, bullets have +8% chance to ricochet."},
+          {"path": "GD_Siren_Skills.Cataclysm.Backdraft", "name": "Backdraft", "tier": 3, "col": 0, "max": 5, "desc": "Fire nova on shield depletion. +2% Burn Damage per point."},
+          {"path": "GD_Siren_Skills.Cataclysm.CloudKill", "name": "Cloud Kill", "tier": 3, "col": 1, "max": 1, "desc": "Shooting an enemy creates a corrosive cloud."},
+          {"path": "GD_Siren_Skills.Cataclysm.Reaper", "name": "Reaper", "tier": 4, "col": 0, "max": 5, "desc": "+8% Gun Damage to enemies above 50% HP per point."},
+          {"path": "GD_Siren_Skills.Cataclysm.Blight", "name": "Blight Phoenix", "tier": 4, "col": 2, "max": 5, "desc": "Kill Skill: deal fire/corrosive damage to nearby enemies."},
+          {"path": "GD_Siren_Skills.Cataclysm.Ruin", "name": "Ruin", "tier": 5, "col": 1, "max": 1, "desc": "Phaselock slags, shocks, and corrodes nearby enemies."},
+          {"path": "GD_Siren_Skills.Cataclysm.Ruin2", "name": "Ruin", "tier": 6, "col": 1, "max": 0}
+        ]
+      }
+    }
+  },
+  "GD_Mercenary": {
+    "class": "Salvador",
+    "action_skill": {
+      "path": "GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking",
+      "name": "Gunzerking",
+      "description": "Dual-wield any two weapons at the same time."
+    },
+    "trees": {
+      "Gun Lust": {
+        "name": "Gun Lust",
+        "color": "#ff4444",
+        "skills": [
+          {"path": "GD_Mercenary_Skills.GunLust.Locked_and_Loaded", "name": "Locked and Loaded", "tier": 1, "col": 0, "max": 5, "desc": "+5% Reload Speed per point. Kill Skill: +10% Fire Rate."},
+          {"path": "GD_Mercenary_Skills.GunLust.QuickDraw", "name": "Quick Draw", "tier": 1, "col": 1, "max": 5, "desc": "+7% Weapon Swap Speed, +2% Crit Damage per point."},
+          {"path": "GD_Mercenary_Skills.GunLust.ImReady", "name": "I'm Ready Already", "tier": 1, "col": 2, "max": 5, "desc": "+5% Action Skill Cooldown Rate per point."},
+          {"path": "GD_Mercenary_Skills.GunLust.AutoLoad", "name": "Auto-Load", "tier": 2, "col": 0, "max": 5, "desc": "Kill Skill: reload all non-equipped weapons."},
+          {"path": "GD_Mercenary_Skills.GunLust.LayWaste", "name": "Lay Waste", "tier": 2, "col": 2, "max": 5, "desc": "Kill Skill: +8% Fire Rate, +5% Crit Damage per point."},
+          {"path": "GD_Mercenary_Skills.GunLust.NoKillLikeOverkill", "name": "No Kill Like Overkill", "tier": 3, "col": 1, "max": 1, "desc": "Excess damage on kill carries over as bonus damage."},
+          {"path": "GD_Mercenary_Skills.GunLust.AllIneedIsOne", "name": "All I Need is One", "tier": 3, "col": 2, "max": 5, "desc": "+8% Gun Damage on next shot after switching weapons."},
+          {"path": "GD_Mercenary_Skills.GunLust.MoneyShot", "name": "Money Shot", "tier": 4, "col": 0, "max": 5, "desc": "Last round deals +8% bonus Gun Damage per point x mag size."},
+          {"path": "GD_Mercenary_Skills.GunLust.DontMakeMeAngry", "name": "Down Not Out", "tier": 4, "col": 2, "max": 1, "desc": "Gunzerk while in FFYL."},
+          {"path": "GD_Mercenary_Skills.GunLust.KeepFiring", "name": "Keep Firing", "tier": 5, "col": 1, "max": 5, "desc": "+1.2% Fire Rate per point per second while firing (stacks)."},
+          {"path": "GD_Mercenary_Skills.GunLust.Inconceivable", "name": "No Kill Like Overkill", "tier": 6, "col": 1, "max": 0}
+        ]
+      },
+      "Rampage": {
+        "name": "Rampage",
+        "color": "#4488ff",
+        "skills": [
+          {"path": "GD_Mercenary_Skills.Rampage.Inconceivable", "name": "Inconceivable", "tier": 1, "col": 0, "max": 5, "desc": "Up to +10% chance to not consume ammo per point (lower mag = higher)."},
+          {"path": "GD_Mercenary_Skills.Rampage.FilledToTheBrim", "name": "Filled to the Brim", "tier": 1, "col": 1, "max": 5, "desc": "+5% Magazine Size, +3% Ammo Capacity per point."},
+          {"path": "GD_Mercenary_Skills.Rampage.AllInTheReflexes", "name": "All in the Reflexes", "tier": 1, "col": 2, "max": 5, "desc": "+7% Reload Speed, +10% Melee Damage per point."},
+          {"path": "GD_Mercenary_Skills.Rampage.LastManStanding", "name": "Last Man Standing", "tier": 2, "col": 0, "max": 5, "desc": "+14% FFYL Duration per point."},
+          {"path": "GD_Mercenary_Skills.Rampage.YippeeKiYay", "name": "Yippee Ki Yay", "tier": 2, "col": 2, "max": 5, "desc": "+0.6s Gunzerk Duration per point per kill during Gunzerking."},
+          {"path": "GD_Mercenary_Skills.Rampage.SteadyAsSheGoes", "name": "Steady as She Goes", "tier": 3, "col": 1, "max": 1, "desc": "+80% Recoil Reduction, +30% chance for full accuracy during Gunzerking."},
+          {"path": "GD_Mercenary_Skills.Rampage.5ShotsOrSix", "name": "5 Shots or 6", "tier": 3, "col": 2, "max": 5, "desc": "+5% chance per point to add ammo instead of consuming it."},
+          {"path": "GD_Mercenary_Skills.Rampage.DoubleYourFun", "name": "Double Your Fun", "tier": 4, "col": 0, "max": 1, "desc": "Throwing grenade during Gunzerking throws two."},
+          {"path": "GD_Mercenary_Skills.Rampage.GetSome", "name": "Get Some", "tier": 4, "col": 2, "max": 5, "desc": "Shooting an enemy reduces cooldown by 0.6s per point."},
+          {"path": "GD_Mercenary_Skills.Rampage.KeepItPipingHot", "name": "Keep It Piping Hot", "tier": 5, "col": 1, "max": 5, "desc": "+5% Gun, Melee, Grenade Damage while Gunzerking is cooling down."},
+          {"path": "GD_Mercenary_Skills.Rampage.HeyHey", "name": "Get Some", "tier": 6, "col": 1, "max": 0}
+        ]
+      },
+      "Brawn": {
+        "name": "Brawn",
+        "color": "#44cc44",
+        "skills": [
+          {"path": "GD_Mercenary_Skills.Brawn.HardToKill", "name": "Hard to Kill", "tier": 1, "col": 0, "max": 5, "desc": "+4% Max Health, +0.1% HP regen/s per point."},
+          {"path": "GD_Mercenary_Skills.Brawn.Incite", "name": "Incite", "tier": 1, "col": 1, "max": 5, "desc": "+6% Movement Speed, +10% on damage taken per point."},
+          {"path": "GD_Mercenary_Skills.Brawn.ImTheTank", "name": "I'm the Juggernaut", "tier": 1, "col": 2, "max": 5, "desc": "Kill Skill: +4% Damage Reduction per point."},
+          {"path": "GD_Mercenary_Skills.Brawn.AintGotTime", "name": "Ain't Got Time to Bleed", "tier": 2, "col": 0, "max": 5, "desc": "+0.4% HP regen/s per point while Gunzerking."},
+          {"path": "GD_Mercenary_Skills.Brawn.BusFull", "name": "Bus That Can't Slow Down", "tier": 2, "col": 2, "max": 5, "desc": "+2% Gun Damage per point while Gunzerking."},
+          {"path": "GD_Mercenary_Skills.Brawn.JustGotReal", "name": "Just Got Real", "tier": 3, "col": 1, "max": 1, "desc": "+3% Gun Damage per point when below 50% HP per point."},
+          {"path": "GD_Mercenary_Skills.Brawn.FistfulOfHurt", "name": "Fistful of Hurt", "tier": 3, "col": 2, "max": 1, "desc": "Melee Override: devastating uppercut."},
+          {"path": "GD_Mercenary_Skills.Brawn.OutOfBubblegum", "name": "Out of Bubblegum", "tier": 4, "col": 0, "max": 5, "desc": "+7% Melee Damage, +3% Fire Rate when shields depleted."},
+          {"path": "GD_Mercenary_Skills.Brawn.ComeAtMeBro", "name": "Come At Me Bro", "tier": 4, "col": 2, "max": 1, "desc": "Taunts enemies, regenerates HP, gains damage reduction."},
+          {"path": "GD_Mercenary_Skills.Brawn.SexualTyrannosaurus", "name": "Sexual Tyrannosaurus", "tier": 5, "col": 1, "max": 5, "desc": "+0.4% HP regen/s per point when taking damage."},
+          {"path": "GD_Mercenary_Skills.Brawn.ComeAtMeBro2", "name": "Come At Me Bro", "tier": 6, "col": 1, "max": 0}
+        ]
+      }
+    }
+  },
+  "GD_Tulip": {
+    "class": "Gaige",
+    "action_skill": {
+      "path": "GD_Tulip_DeathTrap.Skills.Skill_DeathTrap",
+      "name": "Deathtrap",
+      "description": "Summon Deathtrap, a powerful robot ally."
+    },
+    "trees": {
+      "BestFriendsForever": {
+        "name": "Best Friends Forever",
+        "color": "#4488ff",
+        "skills": [
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.CloseEnough", "name": "Close Enough", "tier": 1, "col": 0, "max": 5, "desc": "Missed bullets ricochet toward enemies. +10% chance, -50% damage."},
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.CookingUpTrouble", "name": "Cooking Up Trouble", "tier": 1, "col": 1, "max": 5, "desc": "Regenerate +0.4% max HP/s per point with full magazine."},
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.FancyMathematics", "name": "Fancy Mathematics", "tier": 1, "col": 2, "max": 5, "desc": "Shield regen delay reduced when hit (-0.5s per point, more at low HP)."},
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.BuckUp", "name": "Buck Up", "tier": 2, "col": 0, "max": 1, "desc": "Deathtrap restores ally shields."},
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.PotentAsAPony", "name": "Potent as a Pony", "tier": 2, "col": 2, "max": 5, "desc": "+4% Max Health for you and Deathtrap per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.UpshotRobot", "name": "Upshot Robot", "tier": 3, "col": 1, "max": 1, "desc": "Kill extends Deathtrap duration. +DT melee damage stacking."},
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.UnstoppableForce", "name": "Unstoppable Force", "tier": 3, "col": 2, "max": 5, "desc": "Kill Skill: +7% Movement Speed, +1% shield regen/s per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.ExplosiveClap", "name": "Explosive Clap", "tier": 4, "col": 0, "max": 1, "desc": "Deathtrap creates an explosion by clapping."},
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.MadeOfSternerStuff", "name": "Made of Sterner Stuff", "tier": 4, "col": 2, "max": 5, "desc": "+1% Damage Reduction for you and DT, +3% DT Melee Damage per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.20PercentCooler", "name": "20% Cooler", "tier": 5, "col": 1, "max": 5, "desc": "+5% Cooldown Rate per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.BestFriendsForever.SharingIsCaring", "name": "Sharing is Caring", "tier": 6, "col": 1, "max": 1, "desc": "Deathtrap gets a copy of your shield."}
+        ]
+      },
+      "LittleBigTrouble": {
+        "name": "Little Big Trouble",
+        "color": "#ff4444",
+        "skills": [
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.MorePep", "name": "More Pep", "tier": 1, "col": 0, "max": 5, "desc": "+6% Elemental Effect Chance per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.Myelin", "name": "Myelin", "tier": 1, "col": 1, "max": 5, "desc": "+6% Shield Capacity, +15% Shock Resistance per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ShockAndAAAGGGHHH", "name": "Shock and AAAGGGHH!", "tier": 1, "col": 2, "max": 1, "desc": "Reloading throws your gun like a grenade."},
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.TheStare", "name": "The Stare", "tier": 2, "col": 0, "max": 1, "desc": "Deathtrap fires a laser beam dealing fire damage."},
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.Strength", "name": "Strength of Five Gorillas", "tier": 2, "col": 2, "max": 5, "desc": "+3% Melee Damage per point. DT: +7% Melee Damage."},
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.Shock", "name": "Electrical Burn", "tier": 3, "col": 1, "max": 5, "desc": "Shock DoT can set enemies on fire. +4% chance per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.Burn", "name": "Evil Enchantress", "tier": 3, "col": 2, "max": 5, "desc": "+5% Elemental Damage on Kill per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.OneTwo", "name": "One Two Boom", "tier": 4, "col": 0, "max": 1, "desc": "DT shoots a shock orb; shooting it causes an explosion."},
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk", "name": "Wires Don't Talk", "tier": 4, "col": 2, "max": 5, "desc": "+3% Electrocute Damage, +5% Shock Damage per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.Interspersed", "name": "Interspersed Outburst", "tier": 5, "col": 1, "max": 5, "desc": "Every few shots fires a free slag shot."},
+          {"path": "GD_Tulip_Mechromancer_Skills.LittleBigTrouble.MakeItSparkle", "name": "Make it Sparkle", "tier": 6, "col": 1, "max": 1, "desc": "Shooting DT with an element imbues its melee attacks."}
+        ]
+      },
+      "OrderedChaos": {
+        "name": "Ordered Chaos",
+        "color": "#44cc44",
+        "skills": [
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.Anarchy", "name": "Anarchy", "tier": 1, "col": 1, "max": 1, "desc": "+1.75% Gun Damage, -1.75% Accuracy per stack (max 150)."},
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.SmallerLighterFaster", "name": "Smaller Lighter Faster", "tier": 1, "col": 2, "max": 5, "desc": "-2% Magazine Size, +6% Reload Speed per point per Anarchy."},
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.PreshrunkCyberpunk", "name": "Preshrunk Cyberpunk", "tier": 2, "col": 0, "max": 5, "desc": "+50 max Anarchy stacks per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.Robot_Rampage", "name": "Robot Rampage", "tier": 2, "col": 2, "max": 1, "desc": "Deathtrap does rapid multi-hit melee attacks."},
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.BloodSoakedShields", "name": "Blood Soaked Shields", "tier": 3, "col": 0, "max": 5, "desc": "Kill restores 20% shield per point, costs 1% max HP."},
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.DiscordSkill", "name": "Discord", "tier": 3, "col": 1, "max": 1, "desc": "Prematurely reloading: +25% Accuracy, +3% HP regen, +65% Fire Rate but drain Anarchy."},
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.TypecastIconoclast", "name": "Typecast Iconoclast", "tier": 3, "col": 2, "max": 5, "desc": "+6% chance to gain extra Anarchy stack per point."},
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.RationalAnarchist", "name": "Rational Anarchist", "tier": 4, "col": 0, "max": 1, "desc": "First Anarchy stack gives 25 stacks."},
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.DeathFromAbove", "name": "Death From Above", "tier": 4, "col": 2, "max": 5, "desc": "Airborne shots consume Anarchy to fire a digistruct explosion."},
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.TheNthDegree", "name": "The Nth Degree", "tier": 5, "col": 1, "max": 5, "desc": "Every Nth shot ricochets to a nearby enemy. N = 11 - 2*points."},
+          {"path": "GD_Tulip_Mechromancer_Skills.OrderedChaos.WithClaws", "name": "With Claws", "tier": 6, "col": 1, "max": 1, "desc": "Melee Override: slash with digistruct claws dealing damage based on Anarchy."}
+        ]
+      }
+    }
+  },
+  "GD_Lilac": {
+    "class": "Krieg",
+    "action_skill": {
+      "path": "GD_Lilac_Skills_Mania.Skills.Skill_BuzzAxeRampage",
+      "name": "Buzz Axe Rampage",
+      "description": "Go on a rampage with your buzz axe for massive melee damage."
+    },
+    "trees": {
+      "Bloodlust": {
+        "name": "Bloodlust",
+        "color": "#ff4444",
+        "skills": [
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.BloodFilled", "name": "Blood-Filled Guns", "tier": 1, "col": 0, "max": 5, "desc": "+0.5% Magazine Size per Bloodlust stack per point."},
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.BloodTwitch", "name": "Blood Twitch", "tier": 1, "col": 1, "max": 5, "desc": "+0.3% Weapon Swap Speed per stack per point."},
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.TasteOfBlood", "name": "Taste of Blood", "tier": 1, "col": 2, "max": 5, "desc": "+0.1% Damage Reduction per stack during Buzz Axe Rampage per point."},
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.BloodOverdrive", "name": "Blood Overdrive", "tier": 2, "col": 0, "max": 5, "desc": "+0.5% Grenade Damage, -0.005s Fuse Time per stack per point."},
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.NervousBlood", "name": "Nervous Blood", "tier": 2, "col": 2, "max": 5, "desc": "Kill Skill: +0.3% Reload Speed per stack per point."},
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.Bloodbath", "name": "Bloodbath", "tier": 3, "col": 1, "max": 5, "desc": "Grenade kills give +0.5% Gun Damage per stack per point."},
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.FuelTheBlood", "name": "Fuel the Blood", "tier": 3, "col": 2, "max": 5, "desc": "Melee kill: +0.2% Grenade Damage per stack per point."},
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.BuzzAxeBombadier", "name": "Buzz Axe Bombardier", "tier": 4, "col": 0, "max": 1, "desc": "Thrown buzz axe has dynamite attached."},
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.Boiling_Blood", "name": "Boiling Blood", "tier": 4, "col": 2, "max": 5, "desc": "+0.3s before Bloodlust stacks start decaying per point."},
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.BloodExplosion", "name": "Blood Explosion", "tier": 5, "col": 1, "max": 1, "desc": "Killing an enemy causes them to explode. Overkill damage * stacks."},
+          {"path": "GD_Lilac_Skills_Bloodlust.Skills.BloodExplosion2", "name": "Bloodsplosion", "tier": 6, "col": 1, "max": 0}
+        ]
+      },
+      "Mania": {
+        "name": "Mania",
+        "color": "#44cc44",
+        "skills": [
+          {"path": "GD_Lilac_Skills_Mania.Skills.EmptyTheRage", "name": "Empty the Rage", "tier": 1, "col": 0, "max": 5, "desc": "+4% Melee Damage per point. +50% more with empty magazine."},
+          {"path": "GD_Lilac_Skills_Mania.Skills.FeedTheMeat", "name": "Feed the Meat", "tier": 1, "col": 1, "max": 5, "desc": "+10% Max Health, +0.5s Shield Recharge Delay per point."},
+          {"path": "GD_Lilac_Skills_Mania.Skills.Embrace_The_Pain", "name": "Embrace the Pain", "tier": 1, "col": 2, "max": 5, "desc": "+7% Fire Rate when shields are down. +1s Shield Delay."},
+          {"path": "GD_Lilac_Skills_Mania.Skills.LightTheFuse", "name": "Light the Fuse", "tier": 2, "col": 0, "max": 1, "desc": "In FFYL: run around throwing dynamite. Revive with melee kill."},
+          {"path": "GD_Lilac_Skills_Mania.Skills.StripTheFlesh", "name": "Strip the Flesh", "tier": 2, "col": 2, "max": 5, "desc": "+3% Explosive Damage, +6% more in FFYL per point."},
+          {"path": "GD_Lilac_Skills_Mania.Skills.Thrill_Of_The_Kill", "name": "Thrill of the Kill", "tier": 3, "col": 1, "max": 5, "desc": "Up to 50% overkill damage returned as HP per point."},
+          {"path": "GD_Lilac_Skills_Mania.Skills.SilenceTheVoices", "name": "Silence the Voices", "tier": 3, "col": 2, "max": 5, "desc": "+50% Melee Damage per point. 12% chance to hit yourself."},
+          {"path": "GD_Lilac_Skills_Mania.Skills.PullThePin", "name": "Pull the Pin", "tier": 4, "col": 0, "max": 1, "desc": "Drop a free grenade on death in FFYL."},
+          {"path": "GD_Lilac_Skills_Mania.Skills.RedeemTheSoul", "name": "Redeem the Soul", "tier": 4, "col": 2, "max": 1, "desc": "+50% FFYL Duration. Instant revive an ally by downing yourself."},
+          {"path": "GD_Lilac_Skills_Mania.Skills.ReleaseTheBeast", "name": "Release the Beast", "tier": 5, "col": 1, "max": 1, "desc": "Below 33% HP: Buzz Axe transforms, full heal, +100% Melee, instant cooldown."},
+          {"path": "GD_Lilac_Skills_Mania.Skills.ReleaseTheBeast2", "name": "Release the Beast", "tier": 6, "col": 1, "max": 0}
+        ]
+      },
+      "Hellborn": {
+        "name": "Hellborn",
+        "color": "#ff8844",
+        "skills": [
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.BurnBabyBurn", "name": "Burn, Baby, Burn", "tier": 1, "col": 0, "max": 5, "desc": "+7% Burn Damage, +15% chance to self-ignite per point."},
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.FuelThefire", "name": "Fuel the Fire", "tier": 1, "col": 1, "max": 5, "desc": "+7% chance to ignite enemies with melee per point."},
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.PainIsPower", "name": "Pain is Power", "tier": 1, "col": 2, "max": 5, "desc": "+5% Gun and Melee Damage when on fire. -3% Crit."},
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.NumbedNerves", "name": "Numbed Nerves", "tier": 2, "col": 0, "max": 5, "desc": "+5% Damage Reduction when on fire per point."},
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.FlameFlare", "name": "Flame Flare", "tier": 2, "col": 2, "max": 5, "desc": "Status effects on you have +20% duration/+7% damage per point."},
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.Hellfire_Halitosis", "name": "Hellfire Halitosis", "tier": 3, "col": 1, "max": 1, "desc": "Melee Override: breathe fire at enemies."},
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.DelusionalDamage", "name": "Delusional Damage", "tier": 3, "col": 2, "max": 5, "desc": "Burn effects can trigger other elements. +3% Elemental Chance."},
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.FireFirey", "name": "Fire Fiend", "tier": 4, "col": 0, "max": 5, "desc": "+3% Weapon Accuracy, +7% Reload Speed when on fire per point."},
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.ElementalElation", "name": "Elemental Elation", "tier": 4, "col": 2, "max": 5, "desc": "+1% Fire Rate, +1% Magazine Size per Elemental Elation stack per point."},
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.RavingRetribution", "name": "Raving Retribution", "tier": 5, "col": 1, "max": 1, "desc": "When on fire, taking damage sends fireballs at attackers."},
+          {"path": "GD_Lilac_Skills_Hellborn.Skills.RavingRetribution2", "name": "Raving Retribution", "tier": 6, "col": 1, "max": 0}
+        ]
+      }
+    }
+  }
+}

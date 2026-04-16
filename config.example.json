@@ -1,0 +1,7 @@
+{
+  "save_dir": "C:\\Users\\YourName\\Documents\\My Games\\Borderlands 2\\WillowGame\\SaveData\\YourSteamID",
+  "gibbed_dir": "C:\\path\\to\\gibbed_data",
+  "borderlands2_tool_dir": "C:\\path\\to\\borderlands2-tool",
+  "game_dir": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Borderlands 2",
+  "backup_generations": 5
+}

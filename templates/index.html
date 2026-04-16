@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BL2 Save Editor</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/SobelOperatorShader.js"></script>
+</head>
+<body>
+    <!-- ═══ Header ═══ -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-bl">BL2</span>
+                <span class="logo-text">SAVE EDITOR</span>
+            </div>
+            <div id="header-status"></div>
+        </div>
+        <div class="header-stripe"></div>
+    </header>
+
+    <div id="app">
+        <!-- ═══ Sidebar ═══ -->
+        <aside id="sidebar">
+            <div class="sidebar-header">VAULT HUNTERS</div>
+            <div id="save-list"></div>
+        </aside>
+
+        <!-- ═══ Main Content ═══ -->
+        <main id="content">
+            <!-- Landing -->
+            <div id="no-save-msg">
+                <div class="vault-symbol">
+                    <svg viewBox="0 0 100 100" width="100" height="100">
+                        <defs>
+                            <filter id="vaultGlow"><feGaussianBlur stdDeviation="2" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                        </defs>
+                        <g filter="url(#vaultGlow)">
+                            <polygon points="50,8 90,30 90,70 50,92 10,70 10,30" fill="none" stroke="#fcb100" stroke-width="2"/>
+                            <polygon points="50,20 78,36 78,64 50,80 22,64 22,36" fill="none" stroke="#fcb100" stroke-width="1" opacity="0.4"/>
+                            <circle cx="50" cy="50" r="12" fill="none" stroke="#fcb100" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="4" fill="#fcb100" opacity="0.6"/>
+                        </g>
+                    </svg>
+                </div>
+                <p>Select a Vault Hunter to begin</p>
+                <div class="landing-subtitle">EDIT SAVES &middot; IMPORT CODES &middot; CUSTOMIZE GEAR</div>
+                <div class="landing-shortcuts">
+                    <span><kbd>Ctrl+S</kbd> Save</span>
+                    <span><kbd>Ctrl+F</kbd> Search</span>
+                    <span><kbd>1-7</kbd> Tabs</span>
+                    <span><kbd>Esc</kbd> Close</span>
+                </div>
+            </div>
+
+            <!-- ═══ Editor ═══ -->
+            <div id="editor" class="hidden">
+
+                <!-- Main Tab Bar -->
+                <div class="main-tab-bar">
+                    <button class="main-tab active" data-mtab="character"><span class="mtab-key">1</span> CHARACTER</button>
+                    <button class="main-tab" data-mtab="skills"><span class="mtab-key">2</span> SKILLS</button>
+                    <button class="main-tab" data-mtab="inventory"><span class="mtab-key">3</span> INVENTORY</button>
+                    <button class="main-tab" data-mtab="missions"><span class="mtab-key">4</span> MISSIONS</button>
+                    <button class="main-tab" data-mtab="fasttravel"><span class="mtab-key">5</span> FAST TRAVEL</button>
+                    <button class="main-tab" data-mtab="challenges"><span class="mtab-key">6</span> CHALLENGES</button>
+                    <button class="main-tab" data-mtab="achievements"><span class="mtab-key">7</span> ACHIEVEMENTS</button>
+                </div>
+
+                <!-- ── Tab 1: Character ── -->
+                <div class="main-tab-content active" id="mtab-character">
+                    <div class="top-row">
+                        <section id="character-section" class="panel">
+                            <div class="char-header-row">
+                                <input type="text" id="char-name" class="char-name-input" placeholder="Name">
+                                <span id="char-class-badge"></span>
+                            </div>
+
+                            <!-- XP Bar -->
+                            <div class="xp-bar-wrap">
+                                <div class="xp-bar-bg"><div class="xp-bar-fill" id="xp-bar-fill"></div></div>
+                                <div class="xp-label" id="xp-label">0 / 0 XP</div>
+                            </div>
+
+                            <!-- Level + Skill Points -->
+                            <div class="char-stat-grid">
+                                <div class="cs-cell cs-level">
+                                    <img class="cs-icon" src="/static/icons/vault_symbol.png" alt="Level">
+                                    <div class="cs-data">
+                                        <span class="cs-label">LEVEL</span>
+                                        <input type="number" id="char-level" min="1" max="80" class="cs-input">
+                                    </div>
+                                </div>
+                                <div class="cs-cell cs-skill">
+                                    <img class="cs-icon" src="/static/icons/skill.png" alt="Skill Points">
+                                    <div class="cs-data">
+                                        <span class="cs-label">SKILL PTS</span>
+                                        <input type="number" id="char-skillpoints" min="0" class="cs-input">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Currencies -->
+                            <div class="char-currency-grid">
+                                <div class="cc-cell" data-currency="money">
+                                    <img class="cc-icon" src="/static/icons/money.png" alt="Money">
+                                    <input type="number" id="char-money" min="0" class="cc-input">
+                                </div>
+                                <div class="cc-cell" data-currency="eridium">
+                                    <img class="cc-icon" src="/static/icons/eridium.png" alt="Eridium">
+                                    <input type="number" id="char-eridium" min="0" class="cc-input">
+                                </div>
+                                <div class="cc-cell" data-currency="seraph">
+                                    <img class="cc-icon" src="/static/icons/seraph.png" alt="Seraph Crystals">
+                                    <input type="number" id="char-seraph" min="0" class="cc-input">
+                                </div>
+                                <div class="cc-cell" data-currency="torgue">
+                                    <img class="cc-icon" src="/static/icons/torgue.png" alt="Torgue Tokens">
+                                    <input type="number" id="char-torgue" min="0" class="cc-input">
+                                </div>
+                            </div>
+
+                            <!-- Gear Slots -->
+                            <div class="char-gear-grid">
+                                <div class="cg-cell">
+                                    <img class="cg-icon" src="/static/icons/goldenkey.png" alt="Golden Keys">
+                                    <div class="cg-data"><span class="cg-label">KEYS</span><input type="number" id="char-goldenkeys" min="0" max="255" class="cg-input"></div>
+                                </div>
+                                <div class="cg-cell">
+                                    <img class="cg-icon" src="/static/icons/backpack.png" alt="Backpack">
+                                    <div class="cg-data"><span class="cg-label">BACKPACK</span><input type="number" id="char-backpack" min="12" max="39" class="cg-input"></div>
+                                </div>
+                                <div class="cg-cell">
+                                    <img class="cg-icon" src="/static/icons/guns.png" alt="Gun Slots">
+                                    <div class="cg-data"><span class="cg-label">GUNS</span><input type="number" id="char-gunslots" min="2" max="4" class="cg-input"></div>
+                                </div>
+                                <div class="cg-cell">
+                                    <img class="cg-icon" src="/static/icons/bank.png" alt="Bank Slots">
+                                    <div class="cg-data"><span class="cg-label">BANK</span><input type="number" id="char-bank" min="6" max="24" class="cg-input"></div>
+                                </div>
+                                <div class="cg-cell">
+                                    <img class="cg-icon" src="/static/icons/vault_symbol.png" alt="OP Level">
+                                    <div class="cg-data"><span class="cg-label">OP LEVEL</span><input type="number" id="char-oplevel" min="0" max="10" class="cg-input"></div>
+                                </div>
+                            </div>
+
+                            <!-- Ammo Pools -->
+                            <div class="ammo-section">
+                                <div class="ammo-header">
+                                    <span class="ammo-title">AMMO</span>
+                                    <button id="btn-fill-ammo" class="btn-small">FILL ALL</button>
+                                </div>
+                                <div id="ammo-grid" class="ammo-grid"></div>
+                            </div>
+
+                            <div class="char-footer">
+                                <div id="char-playtime"></div>
+                                <button id="btn-save-char" class="btn-primary">SAVE</button>
+                                <button id="btn-unlock-achievements" class="btn-accent" title="Max level, complete all missions/challenges, unlock all fast travel">MAX CHARACTER</button>
+                                <span id="char-save-status"></span>
+                            </div>
+                        </section>
+
+                        <section id="equipment-section" class="panel">
+                            <div class="panel-header"><h2>EQUIPMENT</h2></div>
+                            <div id="equip-grid" class="bl-equip-layout">
+                                <div class="char-viewport" id="char-viewport-3d">
+                                    <div id="viewport-hud" class="viewport-hud"></div>
+                                    <div class="vp-zoom-controls">
+                                        <button class="vp-zoom-btn" id="vp-zoom-in" title="Zoom In">+</button>
+                                        <button class="vp-zoom-btn" id="vp-zoom-out" title="Zoom Out">&minus;</button>
+                                    </div>
+                                </div>
+                                <div class="equip-slots-column">
+                                    <div class="equip-label">WEAPONS</div>
+                                    <div id="equip-weapon-slots"></div>
+                                    <div class="equip-label" style="margin-top:10px">GEAR</div>
+                                    <div id="equip-gear-slots"></div>
+                                    <div class="equip-label" style="margin-top:10px">CUSTOMIZE</div>
+                                    <div class="equip-slot customize-slot" id="btn-open-customize">
+                                        <div class="slot-icon" style="color:var(--accent)">
+                                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="3"/>
+                                                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <div class="slot-label">APPEARANCE</div>
+                                            <div class="slot-name" id="customize-summary" style="color:var(--accent)">Head & Skin</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- ── Tab 2: Skills ── -->
+                <div class="main-tab-content" id="mtab-skills">
+                    <section id="skill-tree-section" class="panel">
+                        <div class="panel-header">
+                            <h2>SKILL TREES</h2>
+                            <span id="skill-points-remaining" style="font-size:12px;color:var(--accent);margin-left:10px"></span>
+                        </div>
+                        <div id="skill-tree-container" class="skill-tree-container"></div>
+                        <div id="skill-tree-empty" class="hidden" style="text-align:center;padding:40px 0;color:var(--text-dim);font-family:'Rajdhani',sans-serif;font-size:14px">
+                            No skill data available for this character.
+                        </div>
+                        <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
+                            <button id="btn-save-skills" class="btn-primary">SAVE SKILLS</button>
+                            <button id="btn-reset-skills" class="btn-secondary">RESET ALL</button>
+                            <span id="skill-save-status" style="font-size:11px;color:var(--text-dim)"></span>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ── Tab 3: Inventory ── -->
+                <div class="main-tab-content" id="mtab-inventory">
+                    <!-- Item Preview (shown when clicking an item) -->
+                    <section id="weapon-preview" class="panel hidden">
+                        <button id="btn-close-preview" class="btn-close">&times;</button>
+                        <div id="preview-content"></div>
+                    </section>
+
+                    <section id="inventory-section" class="panel">
+                        <div class="panel-header">
+                            <h2>INVENTORY</h2>
+                            <div class="tab-bar">
+                                <button class="tab active" data-tab="weapons">Weapons</button>
+                                <button class="tab" data-tab="items">Items</button>
+                                <button class="tab" data-tab="bank">Bank</button>
+                            </div>
+                        </div>
+                        <div class="search-bar">
+                            <input type="text" id="inv-search" placeholder="Search items..." autocomplete="off">
+                            <select id="inv-filter-rarity">
+                                <option value="" style="color:#000">All Rarities</option>
+                                <option value="Common" style="color:#000">Common</option>
+                                <option value="Uncommon" style="color:#000">Uncommon</option>
+                                <option value="Rare" style="color:#000">Rare</option>
+                                <option value="Very Rare" style="color:#000">Very Rare</option>
+                                <option value="Unique" style="color:#000">Unique</option>
+                                <option value="Legendary" style="color:#000">Legendary</option>
+                                <option value="Pearlescent" style="color:#000">Pearlescent</option>
+                                <option value="Seraph" style="color:#000">Seraph</option>
+                                <option value="Effervescent" style="color:#000">Effervescent</option>
+                            </select>
+                        </div>
+                        <div id="inventory-weapons" class="tab-content active"></div>
+                        <div id="inventory-items" class="tab-content hidden"></div>
+                        <div id="inventory-bank" class="tab-content hidden"></div>
+                        <div class="action-bar">
+                            <button id="btn-import" class="btn-accent">IMPORT CODE</button>
+                            <button id="btn-export-all" class="btn-secondary">EXPORT ALL</button>
+                            <button id="btn-bulk-level" class="btn-secondary">SET ALL LEVELS</button>
+                            <button id="btn-save-loadout" class="btn-secondary">SAVE LOADOUT</button>
+                            <button id="btn-load-loadout" class="btn-secondary">LOAD LOADOUT</button>
+                            <button id="btn-add-weapon" class="btn-primary">+ ADD WEAPON</button>
+                            <button id="btn-add-item" class="btn-accent">+ ADD ITEM</button>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ── Tab 4: Missions ── -->
+                <div class="main-tab-content" id="mtab-missions">
+                    <section class="panel">
+                        <h2>MISSION CONTROL</h2>
+                        <div class="mission-toolbar">
+                            <select id="mission-playthrough" class="input-field" style="max-width:200px">
+                                <option value="0">Normal (NVHM)</option>
+                                <option value="1">TVHM</option>
+                                <option value="2">UVHM</option>
+                            </select>
+                            <button id="btn-add-mission" class="btn-primary">+ ADD MISSION</button>
+                            <button id="btn-add-all-story" class="btn-accent">ADD ALL STORY</button>
+                            <button id="btn-complete-all-missions" class="btn-secondary">COMPLETE ALL</button>
+                        </div>
+                        <div class="mission-toolbar" style="margin-top:-6px">
+                            <button id="btn-unlock-tvhm" class="btn-secondary" style="font-size:11px">UNLOCK TVHM</button>
+                            <button id="btn-unlock-uvhm" class="btn-secondary" style="font-size:11px">UNLOCK UVHM</button>
+                            <span id="playthrough-status" style="font-size:12px;color:var(--text-dim)"></span>
+                        </div>
+                        <div id="mission-active" class="mission-active-banner"></div>
+                        <div id="mission-list" class="mission-list"></div>
+                    </section>
+                </div>
+
+                <!-- ── Tab 5: Fast Travel ── -->
+                <div class="main-tab-content" id="mtab-fasttravel">
+                    <section class="panel">
+                        <h2>FAST TRAVEL STATIONS</h2>
+                        <div class="ft-toolbar">
+                            <button id="btn-unlock-all-ft" class="btn-accent">UNLOCK ALL</button>
+<button id="btn-lock-all-ft" class="btn-secondary">LOCK ALL</button>
+                            <button id="btn-save-ft" class="btn-primary">SAVE CHANGES</button>
+                            <span id="ft-status" class="save-status"></span>
+                        </div>
+                        <div id="ft-last-visited" class="ft-last-visited"></div>
+                        <div id="ft-station-list" class="ft-station-list"></div>
+                    </section>
+                </div>
+
+                <!-- ── Tab 6: Challenges ── -->
+                <div class="main-tab-content" id="mtab-challenges">
+                    <section class="panel">
+                        <h2>CHALLENGES</h2>
+                        <div class="challenge-toolbar">
+                            <button id="btn-complete-all-challenges" class="btn-accent">COMPLETE ALL</button>
+                            <button id="btn-reset-all-challenges" class="btn-secondary">RESET ALL</button>
+                            <span id="challenge-status" class="save-status"></span>
+                            <span id="challenge-count" class="challenge-count"></span>
+                        </div>
+                        <div id="challenge-list" class="challenge-list"></div>
+                    </section>
+                </div>
+
+                <!-- ── Tab 7: Achievements ── -->
+                <div class="main-tab-content" id="mtab-achievements">
+                    <section class="panel">
+                        <h2>STEAM ACHIEVEMENTS</h2>
+                        <div class="ach-disclaimer" style="font-size:12px;color:var(--text-dim);margin-bottom:10px;padding:8px 12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:4px">
+                            Steam must be running and logged in for achievements to unlock/lock. Select the achievements you want, then click Unlock Selected or Lock Selected.
+                        </div>
+                        <div class="achievement-toolbar">
+                            <button id="btn-unlock-selected-ach" class="btn-primary">UNLOCK SELECTED</button>
+                            <button id="btn-unlock-all-ach" class="btn-accent">UNLOCK ALL</button>
+                            <button id="btn-lock-selected-ach" class="btn-secondary">LOCK SELECTED</button>
+                            <button id="btn-deselect-all-ach" class="btn-secondary">DESELECT ALL</button>
+                            <button id="btn-refresh-ach" class="btn-secondary">REFRESH</button>
+                            <span id="ach-status" class="save-status"></span>
+                            <span id="steam-status" class="save-status" style="float:right"></span>
+                        </div>
+                        <div id="ach-filter" class="ach-filter">
+                            <select id="ach-category-filter">
+                                <option value="">All Categories</option>
+                            </select>
+                            <label style="margin-left:12px;color:var(--text-dim);font-size:12px">
+                                <input type="checkbox" id="ach-hide-unlocked"> Hide Unlocked
+                            </label>
+                        </div>
+                        <div id="achievement-list" class="achievement-list"></div>
+                    </section>
+                </div>
+
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- Backup Restore Modal -->
+    <div id="modal-backups" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content slide-up" style="min-width:400px">
+            <div class="modal-header">RESTORE FROM BACKUP</div>
+            <div id="backup-list" style="max-height:300px;overflow-y:auto;margin-bottom:10px">
+                <div style="color:var(--text-dim);font-size:12px">Loading...</div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-cancel modal-close">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ Modals ═══ -->
+
+    <!-- Add Mission -->
+    <div id="modal-add-mission" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content slide-up">
+            <div class="modal-header">ADD MISSION</div>
+            <div style="margin-bottom:10px">
+                <label style="font-size:12px;color:var(--text-dim)">Select Mission</label>
+                <select id="add-mission-select" class="input-field" style="width:100%">
+                    <optgroup label="Story Missions" id="add-mission-story"></optgroup>
+                    <optgroup label="Side Missions" id="add-mission-side"></optgroup>
+                </select>
+            </div>
+            <div style="margin-bottom:10px">
+                <label style="font-size:12px;color:var(--text-dim)">Or enter custom path</label>
+                <input type="text" id="add-mission-custom" class="input-field" style="width:100%" placeholder="GD_Z1_Example.M_Example">
+            </div>
+            <div style="display:flex;gap:10px;margin-bottom:10px">
+                <div style="flex:1">
+                    <label style="font-size:12px;color:var(--text-dim)">Status</label>
+                    <select id="add-mission-status" class="input-field" style="width:100%">
+                        <option value="1">Active</option>
+                        <option value="4">Complete</option>
+                    </select>
+                </div>
+                <div style="flex:1">
+                    <label style="font-size:12px;color:var(--text-dim)">Level</label>
+                    <input type="number" id="add-mission-level" class="input-field" style="width:100%" value="1" min="1" max="127">
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="btn-add-mission-submit" class="btn-primary">ADD</button>
+                <button class="btn-cancel modal-close">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import -->
+    <div id="modal-import" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content slide-up">
+            <div class="modal-header">IMPORT GIBBED CODES</div>
+            <textarea id="import-codes" rows="6" placeholder="Paste BL2(...) codes here, one per line"></textarea>
+            <div id="import-preview" class="import-preview hidden"></div>
+            <div class="modal-actions">
+                <button id="btn-import-preview" class="btn-secondary">PREVIEW</button>
+                <button id="btn-import-submit" class="btn-primary">IMPORT ALL</button>
+                <button class="btn-cancel modal-close">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compare Items -->
+    <div id="modal-compare" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content modal-xl slide-up">
+            <div class="modal-header">COMPARE ITEMS</div>
+            <div id="compare-body" class="compare-grid"></div>
+            <div class="modal-actions">
+                <button class="btn-cancel modal-close">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export -->
+    <div id="modal-export" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content slide-up">
+            <div class="modal-header">EXPORT CODES</div>
+            <textarea id="export-codes" rows="10" readonly></textarea>
+            <div class="modal-actions">
+                <button id="btn-copy-export" class="btn-accent">COPY ALL</button>
+                <button class="btn-cancel modal-close">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Weapon -->
+    <div id="modal-add" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content modal-wide slide-up">
+            <div class="modal-header">ADD WEAPON</div>
+            <div class="add-form">
+                <div class="add-row">
+                    <label>Category
+                        <select id="add-category"><option value="">-- Select Weapon Type --</option></select>
+                    </label>
+                    <label>Weapon
+                        <select id="add-balance" disabled><option value="">-- Select category first --</option></select>
+                    </label>
+                    <label>Level
+                        <input type="number" id="add-level" value="1" min="1" max="127">
+                    </label>
+                </div>
+                <div id="add-parts-section" class="hidden">
+                    <div class="section-divider">CUSTOMIZE PARTS</div>
+                    <div id="add-parts-grid" class="add-row"></div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="btn-add-submit" class="btn-primary" disabled>ADD TO INVENTORY</button>
+                <button class="btn-cancel modal-close">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Level Edit -->
+    <div id="modal-level" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content slide-up">
+            <div class="modal-header">EDIT ITEM LEVEL</div>
+            <label>New Level <input type="number" id="edit-level" min="1" max="127"></label>
+            <input type="hidden" id="edit-field">
+            <input type="hidden" id="edit-index">
+            <div class="modal-actions">
+                <button id="btn-level-submit" class="btn-primary">SET LEVEL</button>
+                <button class="btn-cancel modal-close">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Character Customization -->
+    <div id="modal-customize" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content modal-wide slide-up">
+            <div class="modal-header">CHARACTER CUSTOMIZATION</div>
+            <div class="customize-form">
+                <div class="customize-row">
+                    <label>Head
+                        <select id="cust-head"><option value="">Loading...</option></select>
+                    </label>
+                    <label>Skin
+                        <select id="cust-skin"><option value="">Loading...</option></select>
+                    </label>
+                </div>
+                <div class="section-divider" style="margin-top:16px">APPEARANCE COLORS</div>
+                <div class="customize-colors">
+                    <div class="color-group">
+                        <label>Primary</label>
+                        <div class="color-sliders" id="color-primary">
+                            <label>R <input type="range" min="0" max="255" class="color-r" value="127"><span class="cv">127</span></label>
+                            <label>G <input type="range" min="0" max="255" class="color-g" value="127"><span class="cv">127</span></label>
+                            <label>B <input type="range" min="0" max="255" class="color-b" value="127"><span class="cv">127</span></label>
+                        </div>
+                        <div class="color-preview" id="color-preview-0"></div>
+                    </div>
+                    <div class="color-group">
+                        <label>Secondary</label>
+                        <div class="color-sliders" id="color-secondary">
+                            <label>R <input type="range" min="0" max="255" class="color-r" value="127"><span class="cv">127</span></label>
+                            <label>G <input type="range" min="0" max="255" class="color-g" value="127"><span class="cv">127</span></label>
+                            <label>B <input type="range" min="0" max="255" class="color-b" value="127"><span class="cv">127</span></label>
+                        </div>
+                        <div class="color-preview" id="color-preview-1"></div>
+                    </div>
+                    <div class="color-group">
+                        <label>Tertiary</label>
+                        <div class="color-sliders" id="color-tertiary">
+                            <label>R <input type="range" min="0" max="255" class="color-r" value="127"><span class="cv">127</span></label>
+                            <label>G <input type="range" min="0" max="255" class="color-g" value="127"><span class="cv">127</span></label>
+                            <label>B <input type="range" min="0" max="255" class="color-b" value="127"><span class="cv">127</span></label>
+                        </div>
+                        <div class="color-preview" id="color-preview-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="btn-cust-submit" class="btn-primary">APPLY CHANGES</button>
+                <button class="btn-cancel modal-close">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bulk Level -->
+    <div id="modal-bulk-level" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content slide-up">
+            <div class="modal-header">SET ALL LEVELS</div>
+            <p style="font-size:12px;color:var(--text-dim);margin-bottom:10px" id="bulk-level-desc">Set all items in the current tab to the same level.</p>
+            <label>New Level <input type="number" id="bulk-level-input" min="1" max="127" value="72"></label>
+            <div class="modal-actions">
+                <button id="btn-bulk-submit" class="btn-primary">SET LEVELS</button>
+                <button class="btn-cancel modal-close">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save Loadout -->
+    <div id="modal-save-loadout" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content slide-up">
+            <div class="modal-header">SAVE LOADOUT</div>
+            <p style="font-size:12px;color:var(--text-dim);margin-bottom:10px">Save your current weapons and items as a named loadout preset.</p>
+            <label>Loadout Name <input type="text" id="loadout-name-input" placeholder="e.g. Boss DPS, Fire Build" maxlength="50"></label>
+            <div class="modal-actions">
+                <button id="btn-save-loadout-submit" class="btn-primary">SAVE</button>
+                <button class="btn-cancel modal-close">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Loadout -->
+    <div id="modal-load-loadout" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content slide-up" style="min-width:360px">
+            <div class="modal-header">LOAD LOADOUT</div>
+            <div id="loadout-list" style="max-height:300px;overflow-y:auto;margin-bottom:10px">
+                <div style="color:var(--text-dim);font-size:12px">Loading...</div>
+            </div>
+            <label style="font-size:11px;color:var(--text-dim);display:flex;align-items:center;gap:6px">
+                <input type="checkbox" id="loadout-replace-check"> Replace current inventory (clear before loading)
+            </label>
+            <div class="modal-actions">
+                <button class="btn-cancel modal-close">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Item (non-weapon) -->
+    <div id="modal-add-item" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content modal-wide slide-up">
+            <div class="modal-header">ADD ITEM</div>
+            <div class="add-form">
+                <div class="add-row">
+                    <label>Category
+                        <select id="add-item-category"><option value="">-- Select Item Type --</option></select>
+                    </label>
+                    <label>Item
+                        <select id="add-item-balance" disabled><option value="">-- Select category first --</option></select>
+                    </label>
+                    <label>Level
+                        <input type="number" id="add-item-level" value="1" min="1" max="127">
+                    </label>
+                </div>
+                <div id="add-item-parts-section" class="hidden">
+                    <div class="section-divider">CUSTOMIZE PARTS</div>
+                    <div id="add-item-parts-grid" class="add-row"></div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="btn-add-item-submit" class="btn-primary" disabled>ADD TO INVENTORY</button>
+                <button class="btn-cancel modal-close">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Item Editor (weapons + shields + relics + class mods + grenades) -->
+    <div id="modal-edit" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content modal-xlarge slide-up">
+            <div class="modal-header" id="edit-modal-title">EDIT ITEM</div>
+            <div id="edit-weapon-form" class="add-form"></div>
+            <div class="modal-actions">
+                <button id="btn-edit-submit" class="btn-primary">SAVE CHANGES</button>
+                <button class="btn-cancel modal-close">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/viewer3d.js?v=9"></script>
+    <script src="/static/app.js?v=5"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BL2 Save Editor - Setup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0e17;
+            color: #c8d0e0;
+            font-family: 'Rajdhani', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .setup-container {
+            background: rgba(12,16,28,0.95);
+            border: 1px solid rgba(232,163,58,0.3);
+            border-radius: 6px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 0 40px rgba(232,163,58,0.1);
+        }
+        .setup-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .setup-header h1 {
+            font-family: 'Oswald', sans-serif;
+            color: #e8a33a;
+            font-size: 28px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .setup-header p {
+            color: #7a8599;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        .field {
+            margin-bottom: 20px;
+        }
+        .field label {
+            display: block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #e8a33a;
+            margin-bottom: 6px;
+        }
+        .field .hint {
+            font-size: 11px;
+            color: #5a6577;
+            margin-bottom: 4px;
+        }
+        .field input {
+            width: 100%;
+            padding: 10px 12px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 3px;
+            color: #c8d0e0;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 14px;
+        }
+        .field input:focus {
+            outline: none;
+            border-color: #e8a33a;
+            box-shadow: 0 0 8px rgba(232,163,58,0.2);
+        }
+        .field .status {
+            font-size: 11px;
+            margin-top: 4px;
+        }
+        .status-ok { color: #44cc66; }
+        .status-warn { color: #ffaa33; }
+        .status-err { color: #ff4444; }
+        .btn-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        .btn-primary {
+            flex: 1;
+            padding: 12px;
+            background: linear-gradient(135deg, #e8a33a, #c4872a);
+            border: none;
+            color: #0a0e17;
+            font-family: 'Oswald', sans-serif;
+            font-size: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .btn-primary:hover { filter: brightness(1.15); }
+        .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+        .btn-secondary {
+            padding: 12px 20px;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #7a8599;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .btn-secondary:hover { border-color: #e8a33a; color: #e8a33a; }
+        .detecting {
+            text-align: center;
+            padding: 20px;
+            color: #7a8599;
+            font-size: 14px;
+        }
+        .error-msg {
+            background: rgba(255,68,68,0.1);
+            border: 1px solid rgba(255,68,68,0.3);
+            color: #ff6666;
+            padding: 10px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+            margin-bottom: 16px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="setup-container">
+        <div class="setup-header">
+            <h1>BL2 Save Editor</h1>
+            <p>First-time setup &mdash; paths will be auto-detected</p>
+        </div>
+
+        <div id="detecting" class="detecting">Scanning for Borderlands 2 installation...</div>
+
+        <div id="setup-form" style="display:none">
+            <div id="error-msg" class="error-msg"></div>
+
+            <div class="field">
+                <label>Save Directory</label>
+                <div class="hint">Where your .sav files are stored</div>
+                <input type="text" id="f-save-dir">
+                <div class="status" id="s-save-dir"></div>
+            </div>
+
+            <div class="field">
+                <label>Game Directory</label>
+                <div class="hint">Borderlands 2 installation folder</div>
+                <input type="text" id="f-game-dir">
+                <div class="status" id="s-game-dir"></div>
+            </div>
+
+            <div class="field">
+                <label>Gibbed Data Directory</label>
+                <div class="hint">Required for item import/export</div>
+                <input type="text" id="f-gibbed-dir">
+                <div class="status" id="s-gibbed-dir"></div>
+            </div>
+
+            <div class="field">
+                <label>borderlands2-tool Directory</label>
+                <div class="hint">Required for save file reading/writing</div>
+                <input type="text" id="f-tool-dir">
+                <div class="status" id="s-tool-dir"></div>
+            </div>
+
+            <div class="btn-row">
+                <button class="btn-secondary" id="btn-redetect">Re-detect</button>
+                <button class="btn-primary" id="btn-save">Save &amp; Launch Editor</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function setStatus(id, text, type) {
+        var el = document.getElementById(id);
+        el.textContent = text;
+        el.className = "status status-" + type;
+    }
+
+    function validateField(inputId, statusId, label) {
+        var val = document.getElementById(inputId).value.trim();
+        if (!val) {
+            setStatus(statusId, label + " not set", "warn");
+            return;
+        }
+        setStatus(statusId, "Path set (will be validated on save)", "ok");
+    }
+
+    async function detect() {
+        document.getElementById("detecting").style.display = "block";
+        document.getElementById("setup-form").style.display = "none";
+        try {
+            var res = await fetch("/api/setup/detect");
+            var data = await res.json();
+
+            document.getElementById("f-save-dir").value = data.save_dir || "";
+            document.getElementById("f-game-dir").value = data.game_dir || "";
+            document.getElementById("f-gibbed-dir").value = data.gibbed_dir || "";
+            document.getElementById("f-tool-dir").value = data.borderlands2_tool_dir || "";
+
+            // Show status for each
+            if (data.save_dir) setStatus("s-save-dir", "Auto-detected", "ok");
+            else setStatus("s-save-dir", "Not found - please enter manually", "warn");
+
+            if (data.game_dir) setStatus("s-game-dir", "Auto-detected", "ok");
+            else setStatus("s-game-dir", "Not found - optional", "warn");
+
+            if (data.gibbed_dir) setStatus("s-gibbed-dir", "Auto-detected", "ok");
+            else setStatus("s-gibbed-dir", "Not found - item import/export will be unavailable", "warn");
+
+            if (data.borderlands2_tool_dir) setStatus("s-tool-dir", "Auto-detected", "ok");
+            else setStatus("s-tool-dir", "Not found - required for save reading", "err");
+
+        } catch (e) {
+            setStatus("s-save-dir", "Detection failed: " + e.message, "err");
+        }
+        document.getElementById("detecting").style.display = "none";
+        document.getElementById("setup-form").style.display = "block";
+    }
+
+    document.getElementById("btn-redetect").addEventListener("click", detect);
+
+    document.getElementById("btn-save").addEventListener("click", async function() {
+        var errEl = document.getElementById("error-msg");
+        errEl.style.display = "none";
+        var config = {
+            save_dir: document.getElementById("f-save-dir").value.trim(),
+            game_dir: document.getElementById("f-game-dir").value.trim(),
+            gibbed_dir: document.getElementById("f-gibbed-dir").value.trim(),
+            borderlands2_tool_dir: document.getElementById("f-tool-dir").value.trim(),
+        };
+        try {
+            var res = await fetch("/api/setup/save", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(config),
+            });
+            var data = await res.json();
+            if (data.ok) {
+                window.location.href = "/";
+            } else {
+                errEl.textContent = data.error || "Failed to save config";
+                errEl.style.display = "block";
+            }
+        } catch (e) {
+            errEl.textContent = "Error: " + e.message;
+            errEl.style.display = "block";
+        }
+    });
+
+    detect();
+    </script>
+</body>
+</html>
