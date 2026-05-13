@@ -33,7 +33,7 @@ from parse_head_mics import parse_props  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 EXTRACT_ROOT = Path(os.environ.get(
     "BL2_MATI_EXTRACT",
-    r"C:\Users\360ol\AppData\Local\Temp\mati_extract\Startup",
+    str(Path.home() / "AppData" / "Local" / "Temp" / "mati_extract" / "Startup"),
 ))
 MIC_DIR = EXTRACT_ROOT / "MaterialInstanceConstant"
 TEX_DIR = EXTRACT_ROOT / "Texture2D"

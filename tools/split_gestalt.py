@@ -433,8 +433,17 @@ WEAPON_TYPES = {
 }
 
 def main():
-    psk_dir = r"C:\Users\360ol\AppData\Local\Temp\psk_export\Startup\SkeletalMesh3"
-    output_dir = r"C:\Users\360ol\bl2-save-editor\static\models\weapons"
+    import os
+    from pathlib import Path
+    # Defaults assume a Windows umodel extract under Temp; override via env vars.
+    psk_dir = os.environ.get(
+        "BL2_PSK_DIR",
+        str(Path.home() / "AppData" / "Local" / "Temp" / "psk_export" / "Startup" / "SkeletalMesh3"),
+    )
+    output_dir = os.environ.get(
+        "BL2_WEAPON_MODELS_OUT",
+        str(Path(__file__).resolve().parent.parent / "static" / "models" / "weapons"),
+    )
 
     for wtype, mesh_name in WEAPON_TYPES.items():
         psk_path = os.path.join(psk_dir, mesh_name + ".psk")
