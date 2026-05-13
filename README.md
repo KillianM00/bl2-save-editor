@@ -26,6 +26,11 @@ launch the editor — all interactively, all idempotent.
 
 **Want zero prompts?** `python setup_wizard.py --yes --launch`
 
+> **Note**: on Windows use `python`, not `python3` — the `python3` command
+> on Windows is a Microsoft Store stub that won't run your real interpreter.
+> On Debian / Ubuntu and a few other Linux distros where only `python3` is on
+> PATH, use `python3 setup_wizard.py` instead.
+
 ## Architecture
 
 ```
