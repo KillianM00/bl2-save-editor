@@ -88,6 +88,12 @@ duplicate, or change level. Full weapon editor exposes all 11 part slots with
 on-the-fly stat estimation. Add new weapons from the full balance-definition
 database.
 
+**Skill tree editor.** Full per-class skill tree visualization driven by
+`static/skill_trees.json`. Live counters for points unspent / allocated /
+available. Color-coded tree panels matching each character's in-game UI.
+Per-skill increment / decrement controls with rank validation against tier
+prerequisites. Respec by zeroing all skills and recovering points.
+
 **Gibbed integration.** Import `BL2(...)` codes from forums, Reddit, Discord.
 Export individual items or the entire inventory as Gibbed codes. Drop-in
 compatibility with the Gibbed save-editor format that the community has used
@@ -253,7 +259,7 @@ bl2-save-editor/
 | **Live in-game stat estimation** | ✓ | — |
 | **Atomic writes + rotating backups** | ✓ | partial |
 | **Damage multiplier mod (PythonSDK)** | ✓ | — |
-| Skill tree editor | — | ✓ |
+| Skill tree editor | ✓ | ✓ |
 
 ## License
 
