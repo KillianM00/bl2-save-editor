@@ -1,5 +1,7 @@
 # BL2 Save Editor
 
+[![Tests](https://github.com/KillianM00/bl2-save-editor/actions/workflows/test.yml/badge.svg)](https://github.com/KillianM00/bl2-save-editor/actions/workflows/test.yml)
+
 A full-stack Borderlands 2 save editor built as a local Flask web application
 with a Three.js 3D viewer and a holographic UI themed after the in-game
 aesthetic. End-to-end: parse Gearbox's encrypted protobuf save format, edit
