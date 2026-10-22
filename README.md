@@ -49,7 +49,7 @@ launch the editor — all interactively, all idempotent.
        │
        ▼
 ┌────────────────────────────────────────┐
-│  apocalyptech/borderlands2 library     │   external pinned dep
+│  apocalyptech/borderlands2 library     │   external dependency
 │  (encrypted-LZO save format)           │
 └────────────────────────────────────────┘
 ```
@@ -113,10 +113,10 @@ damage multiplier (1-100×) tied to a UI slider.
 - **Atomic writes + rotating backups + post-write verification.** Every save
   operation writes to a temp file, atomically renames to the real path,
   rotates up to 5 `.bak` generations, then re-reads the written file and
-  asserts the SHA-1 digest + item count match the in-memory state. A
-  half-completed write under power loss leaves the previous save intact; a
-  corrupted write surfaces an explicit error and the backup is one filename
-  away. Covered by a kill-mid-save test in `tests/test_save_io.py`.
+  asserts the SHA-1 digest + item count match the in-memory state. The
+  replacement avoids exposing a partially written destination file. Backups
+  and round-trip behavior are covered in `tests/test_save_io.py`; this is not
+  a claim of tested power-loss durability.
 - **Game-running detection with cached subprocess.** The editor refuses to
   overwrite saves while `Borderlands2.exe` is running (would race the game's
   in-memory state). Detection uses `tasklist` / `ps` polled per-write but
@@ -165,14 +165,14 @@ damage multiplier (1-100×) tied to a UI slider.
    ```
 3. **Clone the external save-format library:**
    ```bash
-   git clone --depth 1 https://github.com/apocalyptech/borderlands2.git
+   git clone --depth 1 https://github.com/apocalyptech/borderlands2.git borderlands2-tool
    ```
 4. **Configure paths.** Copy `config.example.json` to `config.json` and edit:
    ```json
    {
      "save_dir": "C:\\Users\\YourName\\Documents\\My Games\\Borderlands 2\\WillowGame\\SaveData\\YourSteamID",
      "gibbed_dir": "C:\\path\\to\\gibbed_data",
-     "borderlands2_tool_dir": "./borderlands2",
+     "borderlands2_tool_dir": "./borderlands2-tool",
      "game_dir": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Borderlands 2",
      "backup_generations": 5
    }
@@ -264,8 +264,9 @@ bl2-save-editor/
 ## License
 
 Personal and educational use. Borderlands 2 is a trademark of Gearbox Software
-and 2K Games. This editor reads and writes save formats; no game binaries or
-copyrighted assets are distributed with this repository.
+and 2K Games. This editor reads and writes save formats; game binaries and extracted model assets are not required in this repository.
+Game-related names, artwork, and third-party components retain their respective
+ownership and terms. This project is not affiliated with Gearbox or 2K.
 
 ## Contact
 

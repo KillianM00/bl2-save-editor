@@ -29,6 +29,7 @@ jobs:
       - name: Clone borderlands2-tool
         run: |
           git clone https://github.com/apocalyptech/borderlands2.git borderlands2-tool
+          git -C borderlands2-tool checkout 85a2275a221cb8939c07b2b8c4498a3e403d56ac
 
       - name: Create minimal config
         run: |

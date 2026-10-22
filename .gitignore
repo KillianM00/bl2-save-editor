@@ -45,3 +45,6 @@ UmodelSaved/
 
 # Local assistant memory
 memory/
+# Local dependencies and derived asset caches
+borderlands2-tool/
+.asset_cache.sqlite

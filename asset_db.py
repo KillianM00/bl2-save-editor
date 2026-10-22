@@ -199,6 +199,8 @@ class AssetDB:
 
     def _cache_is_fresh(self) -> bool:
         """Check if SQLite cache exists and is newer than all JSON sources."""
+        if not GIBBED_DIR or not os.path.isdir(GIBBED_DIR):
+            return False
         cache = self._cache_path()
         if not os.path.exists(cache):
             return False
@@ -211,6 +213,8 @@ class AssetDB:
 
     def _save_cache(self) -> None:
         """Serialize lookup tables to SQLite for faster subsequent loads."""
+        if not GIBBED_DIR or not os.path.isdir(GIBBED_DIR):
+            return
         import sqlite3, pickle
         cache = self._cache_path()
         conn = sqlite3.connect(cache)

@@ -231,12 +231,21 @@ class TestBatchParts:
         r = client.get("/api/assets/all-parts-batch?kind=weapon&slots=")
         assert r.status_code == 400
 
-    def test_single_slot(self, client):
+    def test_single_slot(self, client, monkeypatch):
+        # Game-derived asset exports are optional and are not shipped in CI.
+        # Verify that the route passes the requested slot to its data source
+        # and returns that source's records unchanged.
+        from unittest.mock import Mock
+        parts = [{"path": "Test.Barrel", "name": "Test barrel"}]
+        db = Mock()
+        db.get_all_parts_for_slot.return_value = parts
+        monkeypatch.setattr(flask_app.asset_db, "get_db", lambda: db)
         r = client.get("/api/assets/all-parts-batch?kind=weapon&slots=barrel")
         assert r.status_code == 200
         data = r.get_json()
         assert "barrel" in data
-        assert len(data["barrel"]) > 0
+        assert data["barrel"] == parts
+        db.get_all_parts_for_slot.assert_called_once_with("barrel")
 
 
 # ═══════════════════════════════════════════════════════════════
