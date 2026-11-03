@@ -1,17 +1,25 @@
-# BL2 Save Editor
+# BL2 Save Editor — Binary Data Processing and Local Web Tooling
 
-[![Tests](https://github.com/KillianM00/bl2-save-editor/actions/workflows/test.yml/badge.svg)](https://github.com/KillianM00/bl2-save-editor/actions/workflows/test.yml)
+**Python · Flask · JavaScript · Three.js · binary formats**
 
-A full-stack Borderlands 2 save editor built as a local Flask web application
-with a Three.js 3D viewer and a holographic UI themed after the in-game
-aesthetic. End-to-end: parse Gearbox's encrypted protobuf save format, edit
-characters / inventory / weapons / bank, render real glTF character and weapon
-models in-browser, import/export industry-standard Gibbed save codes, and write
-back atomically with rotating backups and post-write verification.
+A local web application for inspecting and editing Borderlands 2 save data. The project connects an upstream encrypted/compressed save-format parser to a structured editing interface, item-code serialization, asset lookup, and an optional 3D viewer.
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue) ![Flask](https://img.shields.io/badge/Flask-2.0+-green) ![Three.js](https://img.shields.io/badge/Three.js-r128-orange) ![License](https://img.shields.io/badge/license-personal_use-lightgrey)
+## Engineering focus
 
----
+- **Binary interoperability:** Integrates the upstream LZO/protobuf save parser and handles bit-packed item codes and typed asset identifiers.
+- **Write integrity:** Per-file locking, rotating backups, temporary writes, atomic replacement, and read-back validation reduce the chance of corrupting a save.
+- **Application architecture:** Flask routes, cached asset metadata, and browser UI components separate binary operations from presentation.
+
+## Evidence and scope
+
+A local utility for user-owned files. SHA-1 checksums belong to the save format and are not a security mechanism. Optional 3D features require separately extracted assets; upstream parser and asset licensing remain distinct from this application.
+
+## Source guide
+
+- [Save write workflow](save_io.py)
+- [Asset resolution](asset_db.py)
+- [Local HTTP application](app.py)
+- [Test source](tests)
 
 ## Quick start
 
@@ -78,7 +86,7 @@ launch the editor — all interactively, all idempotent.
   character / weapon / item viewer with per-rarity glTF materials and skin
   color tinting.
 
-## Features
+## Capabilities
 
 **Character editing.** Level, XP, skill points, OP level. All currencies
 (money, eridium, seraph crystals, torgue tokens, golden keys). Inventory /
@@ -248,7 +256,7 @@ bl2-save-editor/
 └── MOSCOW.md                  Feature prioritization
 ```
 
-## Compared with Gibbed's Save Editor
+## Interoperability and upstream tooling
 
 | Feature | This editor | Gibbed |
 |---|---|---|
