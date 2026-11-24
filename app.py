@@ -11,6 +11,7 @@ import socket
 import threading
 import webbrowser
 from flask import Flask, render_template, jsonify, request
+from save_io import SAVE_PREFIX
 
 import save_io
 import asset_db
@@ -26,7 +27,6 @@ mimetypes.add_type("application/octet-stream", ".bin")
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.jinja_env.auto_reload = True
-
 
 import time as _time
 
@@ -68,8 +68,8 @@ def require_game_not_running(f):
         return f(*args, **kwargs)
     return wrapper
 
+_SAVE_FILENAME_RE = re.compile(rf'^{SAVE_PREFIX}\d{{4}}\.sav$')
 
-_SAVE_FILENAME_RE = re.compile(r'^Save\d{4}\.sav$')
 
 def validate_save_filename(f):
     """Decorator: reject filenames that don't match SaveNNNN.sav pattern."""
