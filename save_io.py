@@ -7,6 +7,7 @@ from __future__ import annotations
 import sys
 import os
 import re
+import platform
 import json as _json
 import struct
 import math
@@ -34,6 +35,8 @@ from borderlands.datautil.common import (
     rotate_data_right, xor_data,
     create_body, replace_raw_item_key,
 )
+
+SAVE_PREFIX = "save" if platform.system().startswith("Linux") else "Save"
 
 SAVE_DIR = _cfg["save_dir"]
 BACKUP_GENERATIONS = _cfg.get("backup_generations", 5)
@@ -112,7 +115,7 @@ def list_saves() -> list[dict[str, Any]]:
     """List all save files in the save directory."""
     saves = []
     for f in sorted(os.listdir(SAVE_DIR)):
-        if f.startswith("Save") and f.endswith(".sav") and not f.endswith(".bak"):
+        if f.startswith(SAVE_PREFIX) and f.endswith(".sav") and not f.endswith(".bak"):
             if "backup" in f or "modded" in f:
                 continue
             path = os.path.join(SAVE_DIR, f)
