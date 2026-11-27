@@ -1,25 +1,6 @@
-# BL2 Save Editor — Binary Data Processing and Local Web Tooling
+# BL2 Save Editor
 
-**Python · Flask · JavaScript · Three.js · binary formats**
-
-A local web application for inspecting and editing Borderlands 2 save data. The project connects an upstream encrypted/compressed save-format parser to a structured editing interface, item-code serialization, asset lookup, and an optional 3D viewer.
-
-## Engineering focus
-
-- **Binary interoperability:** Integrates the upstream LZO/protobuf save parser and handles bit-packed item codes and typed asset identifiers.
-- **Write integrity:** Per-file locking, rotating backups, temporary writes, atomic replacement, and read-back validation reduce the chance of corrupting a save.
-- **Application architecture:** Flask routes, cached asset metadata, and browser UI components separate binary operations from presentation.
-
-## Evidence and scope
-
-A local utility for user-owned files. SHA-1 checksums belong to the save format and are not a security mechanism. Optional 3D features require separately extracted assets; upstream parser and asset licensing remain distinct from this application.
-
-## Source guide
-
-- [Save write workflow](save_io.py)
-- [Asset resolution](asset_db.py)
-- [Local HTTP application](app.py)
-- [Test source](tests)
+Edit Borderlands 2 saves in a local browser interface. You can change character data and items, with an optional 3D item viewer. Close the game before editing and keep a separate copy of your saves.
 
 ## Quick start
 
@@ -41,52 +22,7 @@ launch the editor — all interactively, all idempotent.
 > On Debian / Ubuntu and a few other Linux distros where only `python3` is on
 > PATH, use `python3 setup_wizard.py` instead.
 
-## Architecture
-
-```
-                ┌──────────────────────┐
-   Browser ──→  │  Flask app (app.py)  │   ← single-page UI; JSON API
-                └──────────┬───────────┘
-                           │
-       ┌───────────────────┼─────────────────────┐
-       ▼                   ▼                     ▼
-┌─────────────┐    ┌───────────────┐    ┌──────────────────┐
-│  save_io    │    │   asset_db    │    │ steam_achievements│
-│  protobuf   │    │   Gibbed-data │    │  Steam API ctypes │
-│  parse +    │    │   resolver +  │    │  shim             │
-│  write      │    │   stat calcs  │    └──────────────────┘
-└──────┬──────┘    └───────────────┘
-       │
-       ▼
-┌────────────────────────────────────────┐
-│  apocalyptech/borderlands2 library     │   external dependency
-│  (encrypted-LZO save format)           │
-└────────────────────────────────────────┘
-```
-
-- **`app.py`** — Flask routes for save list / character get-set / inventory
-  manipulation / Gibbed import-export / exe patch / Steam-API queries.
-  Handles browser auto-launch and free-port selection on startup.
-- **`save_io.py`** — the load-edit-save pipeline. Decrypts and parses the
-  protobuf save, mutates fields, re-serialises, writes a rotating backup, then
-  atomically renames the temp file to the real save path. Verifies the write
-  by re-reading and comparing SHA-1 + item count.
-- **`asset_db.py`** — resolves Gibbed JSON exports into typed objects: weapon
-  balance definitions, item-part trees, head/skin asset paths, rarity colors,
-  per-part stat modifiers. Includes a live stat estimator that mirrors the
-  in-game UI's damage / accuracy / fire-rate calculations.
-- **`steam_achievements.py`** — `ctypes` shim over `steam_api64.dll` to query
-  unlocked achievements and challenge progress without a separate Steam client
-  binding.
-- **`patch_bl2.py`** — exe patcher that raises the grade-index cap from 80 to
-  127 via a single targeted byte rewrite (with verification + unpatch
-  support).
-- **`templates/index.html` + `static/app.js` + `static/viewer3d.js`** —
-  single-page UI; vanilla JS frontend, no framework. Three.js handles the 3D
-  character / weapon / item viewer with per-rarity glTF materials and skin
-  color tinting.
-
-## Capabilities
+## Features
 
 **Character editing.** Level, XP, skill points, OP level. All currencies
 (money, eridium, seraph crystals, torgue tokens, golden keys). Inventory /
@@ -117,52 +53,6 @@ equipment carousel.
 **Exe patcher + damage mod.** Raise the grade-index cap from 80 to 127 with a
 verifiable single-byte patch. Optional PythonSDK mod adds a configurable
 damage multiplier (1-100×) tied to a UI slider.
-
-## Engineering decisions worth highlighting
-
-- **Atomic writes + rotating backups + post-write verification.** Every save
-  operation writes to a temp file, atomically renames to the real path,
-  rotates up to 5 `.bak` generations, then re-reads the written file and
-  asserts the SHA-1 digest + item count match the in-memory state. The
-  replacement avoids exposing a partially written destination file. Backups
-  and round-trip behavior are covered in `tests/test_save_io.py`; this is not
-  a claim of tested power-loss durability.
-- **Game-running detection with cached subprocess.** The editor refuses to
-  overwrite saves while `Borderlands2.exe` is running (would race the game's
-  in-memory state). Detection uses `tasklist` / `ps` polled per-write but
-  cached for 3 seconds so rapid edits don't fork a flurry of subprocesses.
-- **Cross-platform path auto-detection.** `config.py` probes Steam install
-  paths and save folders for Windows / Linux / macOS without requiring the
-  user to write any path manually.
-- **glTF asset pipeline.** Custom UModel-export → glTF + PNG sidecar pipeline
-  with `tools/parse_head_mics.py` and `tools/parse_weapon_mics.py` regenerating
-  the per-rarity material JSON the viewer consumes. The 3D viewer degrades
-  gracefully — meshes without extracted assets fall back to a procedural
-  rarity-tinted placeholder rather than erroring out.
-- **Single-page no-framework frontend.** Vanilla JS, ~1.5K LOC in `app.js`. No
-  build step, no bundler. The whole frontend is hot-reloadable just by
-  refreshing the browser.
-- **Idempotent setup wizard.** `setup_wizard.py` is safe to re-run — it
-  detects existing config, venv, dependencies, and the `borderlands2-tool`
-  checkout and fills in only what's missing.
-
-## Skills demonstrated
-
-- **Binary format reverse engineering**: parsing Gearbox's encrypted +
-  compressed + protobuf-encoded `.sav` format, mutating in place, re-encoding
-  with byte-perfect round-trip.
-- **Full-stack web app**: Flask backend with a JSON API, single-page vanilla
-  JS frontend, Three.js 3D rendering pipeline.
-- **Game-tooling pipeline**: UModel export → glTF transcoding → custom JSON
-  sidecar with per-rarity material data, all driven by tools the user can
-  re-run when game assets change.
-- **Cross-platform OS integration**: auto-detection of Steam installs on
-  Windows / Linux / macOS, `ctypes` Steam API binding, exe patching with
-  unpatch support.
-- **Data safety engineering**: atomic file writes, rotating backups,
-  post-write verification, kill-mid-save resilience.
-- **Test discipline**: unit tests for the save I/O pipeline and the JSON API
-  surface under `tests/`.
 
 ## Manual setup (if you'd rather not use the wizard)
 
